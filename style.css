@@ -1,0 +1,43 @@
+/*Header*/
+
+header{
+    background: url('img/bgphotshop.png')  ;
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+}
+
+.text-intro{
+    padding-top: 300px;
+    padding-bottom: 200px;
+}
+
+.preTxt{
+    font-size: 70px;
+    margin: 0;
+    color: #2f2d2d;
+    line-height: 0.5;
+}
+
+h1{
+    font-size: 150px;
+    color: #2f2d2d;
+    font-family: 'Kaushan Script';
+    font-weight: 700;
+
+}
+
+
+/*NAVIGATION: la navigation va se retrecir quand on va sroller sur le contenue + animation en js */
+
+.navbar-rband{
+    font-size: 45px!important;/*passe par dessus bootstrap*/
+    font-family: 'Kaushan Script!important';
+}
+
+.navbar a {
+    color: #fff!important;
+    font-family: 'Lato';
+    font-size: 22px;
+    font-weight: 700;
+}
