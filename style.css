@@ -41,3 +41,11 @@ h1{
     font-size: 22px;
     font-weight: 700;
 }
+
+/*  A PROPOS  */
+
+#aPropos{
+    margin-top: 75px;
+    padding-bottom: 75px;
+    border-bottom: 1px dashed #2f2d2d;
+}
