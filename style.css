@@ -30,7 +30,7 @@ h1{
 
 /*NAVIGATION: la navigation va se retrecir quand on va sroller sur le contenue + animation en js */
 
-.navbar-rband{
+.navbar-brand{
     font-size: 45px!important;/*passe par dessus bootstrap*/
     font-family: 'Kaushan Script!important';
 }
@@ -47,5 +47,12 @@ h1{
 #aPropos{
     margin-top: 75px;
     padding-bottom: 75px;
+    border-bottom: 1px dashed #2f2d2d;
+}
+
+/* Trois icones */
+#icones{
+    padding-top: 75px;
+    padding-bottom:75px;
     border-bottom: 1px dashed #2f2d2d;
 }
