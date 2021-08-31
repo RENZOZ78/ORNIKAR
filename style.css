@@ -84,3 +84,21 @@ h1{
 #galerie .container p{
     padding-bottom: 40px;
 }
+
+/* seconde nbanniere */
+
+#ban2{
+    position: relative;
+    min-height: 300px;
+    background: url(img/Banniere2.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+#carouselContent{
+    margin-top: 70px;
+    font-size: 35px;
+    color: #000;
+    font-weight: 400;
+}
