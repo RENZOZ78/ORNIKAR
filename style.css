@@ -67,3 +67,20 @@ h1{
     background-repeat: no-repeat;
     text-align: center;
 }
+
+/* Galerie */
+#galerie{
+    padding-bottom:100px;
+
+}
+
+.h2Photos{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: "Kaushan Script";
+    font-size: 70px;
+}
+
+#galerie .container p{
+    padding-bottom: 40px;
+}
