@@ -56,3 +56,14 @@ h1{
     padding-bottom:75px;
     border-bottom: 1px dashed #2f2d2d;
 }
+
+/* 1er banniere */
+
+#ban1{
+    position: relative;
+    background: url('img/banniere1.png')   ;
+    background-position: right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+}
