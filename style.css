@@ -28,7 +28,11 @@ h1{
 }
 
 
-/*NAVIGATION: la navigation va se retrecir quand on va sroller sur le contenue + animation en js */
+/*------------------------------NAVIGATION: la navigation va se retrecir quand on va sroller sur le contenue + animation en js */
+
+#main-nav{
+    transition: all 0.4s ease ;
+}
 
 .navbar-brand{
     font-size: 45px!important;/*passe par dessus bootstrap*/
@@ -40,9 +44,21 @@ h1{
     font-family: 'Lato';
     font-size: 22px;
     font-weight: 700;
+    transition: all 0.4s ease;
 }
 
-/*  A PROPOS  */
+    /* animation barre navigation: des qu'on scroll de plus de 30px= la barre va se reduire */
+.navbar.opaque .navbar-brand{
+    font-size: 27px!important;
+    transition: all 0.4s ease;
+}
+.navbar.opaque a{
+    font-size:18px;
+    transition: all 0.4s ease;
+}
+
+
+/*                  -----------------------------A PROPOS ---------------------- */
 
 #aPropos{
     margin-top: 75px;
@@ -230,3 +246,48 @@ h1{
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+
+/* MEIDA QUERY */
+
+@media screen and (max-width: 800px){
+    header{
+        height: 75vh;
+    }
+    .preTxt{
+        font-size: 40px;
+
+    }
+    h1{
+        font-size: 81px;
+    }
+}
+
+@media screen and (max-width: 762){
+   #progress{
+       padding-top : 30px;
+       padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    header{
+        height: 55vh;
+
+    }
+    .text-intro a {
+        padding-top: 200px;
+    }
+    .text-intro a{
+        transform: scale(0.8);
+    }
+    .navbar-brand{
+        font-size: 35px!important;
+    }
+    .preTxt{
+        font-size: 30px;
+    }
+    h1{
+        font-size: 51px;
+    }
+ }
