@@ -102,3 +102,111 @@ h1{
     color: #000;
     font-weight: 400;
 }
+
+/* Cartes */
+
+.offreH{
+    font-size: 70px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    font-family: 'Kaushan Script';
+}
+
+#cartes{
+    padding: 50px 0 100px 0;
+}
+
+.threeCards{
+    width: 300px;
+    height: 520px;
+    position: relative;
+    transition: 0.2s ease-in;
+    box-shadow: 0px 10px 30px #000;
+}
+
+.threeCards:hover{
+    transform:scale(1.1);
+}
+
+.header{
+    height: 200px;
+    width: 300px;
+    position: relative;
+    background: rgba(216, 216, blu216, 0.5)
+}
+
+.header h2{
+    margin: 0;
+    position: relative;
+    top: 130px;
+    text-align: center;
+    font-family: 'Lato';
+    font-size: 15px;
+
+}
+
+#spanPrix{
+    font-size: 40px;
+}
+
+.type{
+    height: 120px;
+    width: 300px;
+    background: rgba(2,2,2,0.5);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    position: absolute;
+    top: 0;
+}
+
+.type h2{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'kaushan script ';
+    font-size: 30px;
+    position: relative;
+    top: 30px;
+}
+
+.details{
+    background: #fff;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    font-family: 'Lato';
+    transition: all 0.5s ease-in;
+
+}
+
+.details:hover{
+    background: rgba(181, 208, 230, 0.1);
+
+}
+
+#btn {
+    background: #fff;
+    height: 50px;
+
+}
+
+#btn a {
+    background: #fff;
+    height: 50px;
+    width: 120px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    top: 10px;
+    border-radius: 30px;
+    border: 1px solid #22a7f0;
+    transition: all 0.2s ease-in;
+}
+
+
+#btn a:hover{
+    background: rgba(6,136,206,0.8);
+    color: #fff;
+
+}
