@@ -66,14 +66,14 @@ h1{
     border-bottom: 1px dashed #2f2d2d;
 }
 
-/* Trois icones */
+/* ***************************Trois icones */
 #icones{
     padding-top: 75px;
     padding-bottom:75px;
     border-bottom: 1px dashed #2f2d2d;
 }
 
-/* 1er banniere */
+/************************* 1er banniere */
 
 #ban1{
     position: relative;
@@ -101,7 +101,7 @@ h1{
     padding-bottom: 40px;
 }
 
-/* seconde nbanniere */
+/*************************** seconde banniere */
 
 #ban2{
     position: relative;
@@ -119,7 +119,7 @@ h1{
     font-weight: 400;
 }
 
-/* Cartes */
+/*********************************** Cartes */
 
 .offreH{
     font-size: 70px;
@@ -148,7 +148,7 @@ h1{
     height: 200px;
     width: 300px;
     position: relative;
-    background: rgba(216, 216, blu216, 0.5)
+    background: rgba(216, 216, 216, 0.5)
 }
 
 .header h2{
@@ -168,7 +168,8 @@ h1{
 .type{
     height: 120px;
     width: 300px;
-    background: rgba(2,2,2,0.5);
+    /* background: rgba(2,2,2,0.5); */
+    background: #0d6efd;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     position: absolute;
     top: 0;
@@ -250,32 +251,74 @@ h1{
 
 /* MEIDA QUERY */
 
-@media screen and (max-width: 800px){
-    header{
+@media screen and (max-width: 1200px){
+    /* header{
         height: 75vh;
-    }
+    } */
     .preTxt{
         font-size: 40px;
 
     }
     h1{
-        font-size: 81px;
+        font-size: 90px;
     }
 }
 
-@media screen and (max-width: 762){
+@media screen and (max-width: 1000px){
+   
+ 
+    .threeCards{
+          
+            margin: 0 auto 30px; 
+        }
+
+    .header{
+        width: 100%;
+    }
+   
+}
+
+@media screen and (max-width: 800px){
+    header{
+        height: 75vh;
+    }
+    .preTxt{
+        font-size: 30px;
+
+    }
+    h1{
+        font-size: 71px;
+    }
+    .text-intro{
+        padding: 100px auto;
+    }
+}
+
+@media screen and (max-width: 762px){
+    header{
+        height: 55vh;
+    }
    #progress{
        padding-top : 30px;
        padding-bottom: 30px;
+    }
+    .preTxt{
+        font-size: 20px;
+
+    }
+    h1{
+        font-size: 51px;
+    }
+    .text-intro{
+        padding-top: 200px ;
     }
 }
 
 @media screen and (max-width: 500px){
     header{
         height: 55vh;
-
     }
-    .text-intro a {
+    .text-intro {
         padding-top: 200px;
     }
     .text-intro a{
@@ -285,7 +328,7 @@ h1{
         font-size: 35px!important;
     }
     .preTxt{
-        font-size: 30px;
+        font-size: 25px;
     }
     h1{
         font-size: 51px;
