@@ -66,14 +66,14 @@ h1{
     border-bottom: 1px dashed #2f2d2d;
 }
 
-/* ***************************Trois icones */
+/* ---------------------------Trois icones */
 #icones{
     padding-top: 75px;
     padding-bottom:75px;
     border-bottom: 1px dashed #2f2d2d;
 }
 
-/************************* 1er banniere */
+/*--------------------------- 1er banniere */
 
 #ban1{
     position: relative;
@@ -101,7 +101,12 @@ h1{
     padding-bottom: 40px;
 }
 
-/*************************** seconde banniere */
+img.img-fluid{
+    height: auto;
+    
+}
+
+/*------------------------------- seconde banniere */
 
 #ban2{
     position: relative;
@@ -119,7 +124,7 @@ h1{
     font-weight: 400;
 }
 
-/*********************************** Cartes */
+/*-------------------------------------- Cartes */
 
 .offreH{
     font-size: 70px;
