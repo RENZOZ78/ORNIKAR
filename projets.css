@@ -1,0 +1,200 @@
+/*Header*/
+
+header{
+    background: url('img/bgphotshop.png')  ;
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+}
+
+.text-intro{
+    padding-top: 300px;
+    padding-bottom: 200px;
+}
+
+.preTxt{
+    font-size: 70px;
+    margin: 0;
+    color: #2f2d2d;
+    line-height: 0.5;
+}
+
+h1{
+    font-size: 150px;
+    color: #2f2d2d;
+    font-family: 'Kaushan Script';
+    font-weight: 700;
+
+}
+
+
+/*------------------------------NAVIGATION: la navigation va se retrecir quand on va sroller sur le contenue + animation en js */
+
+#main-nav{
+    transition: all 0.4s ease ;
+}
+
+.navbar-brand{
+    font-size: 45px!important;/*passe par dessus bootstrap*/
+    font-family: 'Kaushan Script!important';
+}
+
+.navbar a {
+    color: #fff!important;
+    font-family: 'Lato';
+    font-size: 22px;
+    font-weight: 700;
+    transition: all 0.4s ease;
+}
+
+    /* animation barre navigation: des qu'on scroll de plus de 30px= la barre va se reduire */
+.navbar.opaque .navbar-brand{
+    font-size: 27px!important;
+    transition: all 0.4s ease;
+}
+.navbar.opaque a{
+    font-size:18px;
+    transition: all 0.4s ease;
+}
+
+
+/* ********************SECTION PROJETS */
+.projects_section{
+    min-height: calc(100vh - 89.8vh - 300px);
+  }
+
+  .project{
+    display: grid;
+    grid-gap: 0.8rem;
+    grid-template-columns: repeat(2,1fr);
+    margin: 1.5rem 0;
+    padding-right: 0.3rem;
+    img{margin-left: 0.7rem;}
+    .project_text{margin: 0.7rem 0.7rem;}
+  }
+
+
+
+/****************************** MEDIA QUERY */
+
+@media screen and (max-width: 1200px){
+    /* header{
+        height: 75vh;
+    } */
+    .preTxt{
+        font-size: 40px;
+
+    }
+    h1{
+        font-size: 90px;
+    }
+}
+
+
+@media screen and (min-width:850px) and (max-width: 1250px){
+  .projects.ptb_4{
+    display: grid;
+    grid-template-columns: (2, 1fr);
+
+  }
+  .ptb_4{
+    padding: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 1000px){
+
+
+    .threeCards{
+
+            margin: 0 auto 30px;
+        }
+
+    .header{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    header{
+        height: 75vh;
+    }
+    .preTxt{
+        font-size: 30px;
+
+    }
+    h1{
+        font-size: 71px;
+    }
+    .text-intro{
+        padding: 100px auto;
+    }
+}
+
+@media screen and (max-width: 762px){
+    header{
+        height: 55vh;
+    }
+   #progress{
+       padding-top : 30px;
+       padding-bottom: 30px;
+    }
+    .preTxt{
+        font-size: 20px;
+
+    }
+    h1{
+        font-size: 51px;
+    }
+    .text-intro{
+        padding-top: 200px ;
+    }
+}
+
+@media screen and (max-width: 600px ){
+  .projects_section{
+    display: block;
+  }
+
+  .project_content{
+    text-align: center;
+  }
+
+  .project {
+      display: block;
+      margin: 55px auto;
+
+      /* text-align: center; */
+  }
+  img{
+display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+  }
+}
+
+@media screen and (max-width: 500px){
+    header{
+        height: 55vh;
+    }
+    .text-intro {
+        padding-top: 200px;
+    }
+    .text-intro a{
+        transform: scale(0.8);
+    }
+    .navbar-brand{
+        font-size: 35px!important;
+    }
+    .preTxt{
+        font-size: 25px;
+    }
+    h1{
+        font-size: 51px;
+    }
+ }

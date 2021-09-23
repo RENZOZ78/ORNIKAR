@@ -84,7 +84,7 @@ h1{
     text-align: center;
 }
 
-/* Galerie */
+/*---------------------------- Galerie */
 #galerie{
     padding-bottom:100px;
 
@@ -103,7 +103,7 @@ h1{
 
 img.img-fluid{
     height: auto;
-    
+
 }
 
 /*------------------------------- seconde banniere */
@@ -254,7 +254,7 @@ img.img-fluid{
 }
 
 
-/* MEIDA QUERY */
+/******************** MEIDA QUERY */
 
 @media screen and (max-width: 1200px){
     /* header{
@@ -270,17 +270,17 @@ img.img-fluid{
 }
 
 @media screen and (max-width: 1000px){
-   
- 
+
+
     .threeCards{
-          
-            margin: 0 auto 30px; 
+
+            margin: 0 auto 30px;
         }
 
     .header{
         width: 100%;
     }
-   
+
 }
 
 @media screen and (max-width: 800px){
