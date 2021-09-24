@@ -69,13 +69,29 @@ h1{
     grid-template-columns: repeat(2,1fr);
     margin: 1.5rem 0;
     padding-right: 0.3rem;
-    img{margin-left: 0.7rem;}
-    .project_text{margin: 0.7rem 0.7rem;}
+
+  }
+  img{margin-left: 0.7rem;}
+  .project_text{margin: 0.7rem 0.7rem;}
+
+  .section_title, .section_text{
+    padding-left: 30px;
+  }
+
+  .projects.ptb_2{
+    margin-top: 50px;
   }
 
 
 
 /****************************** MEDIA QUERY */
+
+@media screen and (min-width: 990px){
+
+  .project{
+    width: 90%;
+  }
+}
 
 @media screen and (max-width: 1200px){
     /* header{
@@ -129,7 +145,12 @@ h1{
     }
     .text-intro{
         padding: 100px auto;
+        text-align: center;
     }
+    .section_title, .section_text{
+      text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 762px){
@@ -172,9 +193,11 @@ display: block;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+  }
 
+  p.project_text{
 
-
+    text-align: justify;
   }
 }
 
