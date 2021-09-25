@@ -22,6 +22,9 @@
     <!-- css ekko librairie -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js">
 
+    <!-- css aos librairie -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
     <title>Agence Ornikar</title>
 
@@ -79,24 +82,25 @@
             <div class="projects ptb_2">
 
                 <div class="project">
-                    <img src="img/gym-accueil.jpg" class="gym-accueil-img"  alt="Fiteos" height="190px" width="320px" >
+                    <img src="img/gym-accueil.jpg" class="gym-accueil-img"  alt="Fiteos" height="190px" width="320px" data-aos="zoom-in" >
                     <div class="project_content">
-                        <p class="project_text">Fiteos est un site commercial pour salle de sport. Ce site est réalisé en html, css et java script.</p>
-                        <a href="https://cocky-einstein-d0b9f5.netlify.app/" class="btn btn-larg btn-outline-primary btn_project_section"><i class="fas fa-eye"></i>Démo</a>
+                        <p class="project_text " data-aos="fade-up"
+     data-aos-anchor-placement="top-center" >Fiteos est un site commercial pour salle de sport. </p>
+                        <a href="https://cocky-einstein-d0b9f5.netlify.app/" class="btn btn-lg btn-primary btn_project_section" data-aos="fade-up" ><i class="fas fa-eye"></i>Démo</a>
                     </div>
                 </div>
                 <div class="project">
-                    <img src="img/img-portfolio2.jpg" alt="delta-immo" height="190px" width="320px" >
+                    <img src="img/img-portfolio2.jpg" alt="delta-immo" height="190px" width="320px" data-aos="zoom-in" >
                     <div class="project_content">
-                        <p class="project_text">Delta-Immo est un site d'agence immobilière qui vous propose des biens d'exception. Ce site est réalisé en html, css-grid et java script.</p>
-                        <a href="https://relaxed-lewin-d05331.netlify.app/" class="btn btn-larg btn-outline-primary btn_project_section"><i class="fas fa-eye"></i>Démo</a>
+                        <p class="project_text" data-aos="fade-up" >Delta-Immo est un site d'agence immobilière qui vous propose des biens d'exception. </p>
+                        <a href="https://relaxed-lewin-d05331.netlify.app/" class="btn btn-lg btn-primary btn_project_section" data-aos="fade-up" ><i class="fas fa-eye"></i>Démo</a>
                     </div>
                 </div>
                 <div class="project">
-                    <img src="img/ornikar.png" alt="ornikar" height="190px" width="320px" >
+                    <img src="img/ornikar.png" alt="ornikar" height="190px" width="320px" data-aos="zoom-in" >
                     <div class="project_content">
-                        <p class="project_text">ornikar vous propose d'avoir une superbe visibilité sur le web pour votre activité. Pour ce faire Ornikar vous propose de réaliser site internet à l'image de votre société, d'accroitre votre visibilité sur le web, et vous promet une bonne réputation pour votre activité sur la toile.  </p>
-                        <a href="https://friendly-davinci-48a04c.netlify.app/" class="btn btn-larg btn-outline-primary btn_project_section"><i class="fas fa-eye"></i>Démo</a>
+                        <p class="project_text" data-aos="fade-up" >Ornikar vous propose d'avoir une superbe visibilité sur le web pour votre activité.  </p>
+                        <a href="https://friendly-davinci-48a04c.netlify.app/" class="btn btn-lg btn-primary btn_project_section" data-aos="fade-up" ><i class="fas fa-eye"></i>Démo</a>
                     </div>
                 </div>
                 <!-- <div class="project">
@@ -151,6 +155,11 @@
         <!-- js ekko -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
     <script src="app.js"></script>
+        <!-- aos-librarie -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
 
 
 </body>
