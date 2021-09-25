@@ -21,6 +21,9 @@
     <!-- css ekko librairie -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js">
 
+    <!-- css aos librairie -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
     <title>Agence Ornikar</title>
 
@@ -73,13 +76,13 @@
     <section id="aPropos">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="zoom-in-right" data-aos-duration="1000" >
                     <h2>A Propos</h2>
                     <hr>
                     <p>Notre agence vous propose plusieurs solutions afin que votre activié grossise via le web. En effet nous écoutons vos demande, identifions les problèmatiques, posons les étapes du projets, et enfin nous réalisons votre souhait</p>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="zoom-in-left" >
                     <div class="accordion" id="accordionExample" >
                         <div class="card">
                             <div class="card-header">
@@ -122,7 +125,7 @@
                                     </button>
                                 </h5>
                             </div>
-                            <div id="collapseThree" class="collapse" data-parent="#accordionExmple" >
+                            <div id="collapseThree" type="button" class="collapse" data-parent="#accordionExample" >
                                 <div class="card-body">
                                 Parce la réputation de votre société est importante, nous mettons tout en oeuvre que vous clients soient satisfaits et qu'ils le disent tout haut.
                                 </div>
@@ -141,16 +144,19 @@
     <section id="icones">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h2><i class="fab fa-android"></i>&nbsp;Android</h2>
+                <div class="col-md-4" data-aos="fade-up"
+ data-aos-duration="1000" >
+                    <h2><i class="fab fa-android"  ></i>&nbsp;Android</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim rem perspiciatis doloremque voluptate dolor ratione consectetur, nam quis sit?</p>
                 </div>
-                <div class="col-md-4">
-                    <h2><i class="fas fa-archway"></i>&nbsp;Boutique</h2>
+                <div class="col-md-4" data-aos="fade-up"
+ data-aos-duration="1500"  >
+                    <h2><i class="fas fa-archway" ></i>&nbsp;Boutique</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim rem perspiciatis doloremque voluptate dolor ratione consectetur, nam quis sit?</p>
                 </div>
-                <div class="col-md-4">
-                    <h2><i class="fas fa-atom"></i>&nbsp;Tech</h2>
+                <div class="col-md-4" data-aos="fade-left"
+ data-aos-duration="1000" >
+                    <h2><i class="fas fa-atom"  ></i>&nbsp;Tech</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim rem perspiciatis doloremque voluptate dolor ratione consectetur, nam quis sit?</p>
                 </div>
             </div>
@@ -161,7 +167,8 @@
     <!-- SECTION 1ER BANNIERE -->
 
     <section id="ban1" class="py-2">
-        <div class="container py-5">
+        <div class="container py-5" data-aos="fade-left"
+data-aos-duration="2000" >
             <h2 class="pb-3">Êtes-vous prêt à faire passer votre activité à une autre dimension  <i class="fa fa-smile-wink" ></i> </h2>
             <!-- d-none dm-block = technique pour faire disparaitre un element texte a partir de la taille ecran medium -->
             <p class="text-dark d-none d-md-block">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam odio soluta fugit officiis nulla distinctio, ab tempore quaerat consequuntur. Aut?</p>
@@ -171,11 +178,11 @@
 
    <!-- SECTION GALERIE -->
    <section id="galerie">
-       <div class="container">
-           <h2 class="text-center h2Photos">Vos projets</h2>
-            <p class="text-center">Notre instpiration </p>
+       <div class="container"  >
+           <h2 class="text-center h2Photos" data-aos="zoom-in-left" data-aos-duration="1000" >Vos projets</h2>
+            <p class="text-center" data-aos="zoom-in-left" data-aos-duration="1000" >Notre instpiration </p>
             <div class="row justify-content-center">
-                <div class="col-md-10">
+                <div class="col-md-10" data-aos="flip-up"  >
                     <div class="row mb-3">
                         <a href="https://unsplash.it/1200/728.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4"  >
                         <img src="https://unsplash.it/1200/728.jpg?image=251" class="img-fluid" alt="portfolio image"  data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
@@ -289,15 +296,16 @@
    <section id="progress">
        <div class="container">
            <div class="row">
-               <div class="col-md-6 competences">
+               <div class="col-md-6 competences"  data-aos="fade-right" data-aos-offset="300" >
                    <h2>Nos compétences</h2>
                    <hr>
                    <p>
                        Nous vous assurons une prestation de qualités afin que votre activité et que votre réputaiton augmente rapidement sur internet.
                    </p>
-               </div>
+                 </div>
 
-            <div class="col-md-6 pt-1">
+            <div class="col-md-6 pt-1"  data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom" >
                 <p class="m-0">Marketing Digital</p>
                 <div class="progress">
                     <div class="progress-bar progress-bar-animated  progress-bar-striped "  role="progressbar" style="width: 25%" ></div>
@@ -324,7 +332,7 @@
 
    <section id="clients">
        <div class="container">
-           <div class="row">
+           <div class="row" data-aos="zoom-in-up"  >
                <div class="col-md-3 col-sm-6 text-center">
                    <a href="#">
                        <img src="img/spotify.jpg" alt="spotify">
@@ -365,7 +373,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" data-aos="fade-right"  data-aos-offset="500"   data-aos-easing="ease-in-sine" >
                     <h3>Contactez-nous</h3>
                     <p class="lead">N'hésitez pas à nous appeler, nous sommes joignable via nos différents cannaux 24/24h</p>
                     <form action="">
@@ -430,6 +438,11 @@
         <!-- js ekko -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
     <script src="app.js"></script>
+    <!-- aos-librarie -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 
 </body>
