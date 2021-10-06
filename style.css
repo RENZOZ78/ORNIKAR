@@ -111,6 +111,11 @@ img.img-fluid{
 
 }
 
+h2.titre_site{
+   
+   color: #22a7f0;
+}
+
 /*------------------------------- seconde banniere */
 
 #ban2{
@@ -343,5 +348,16 @@ img.img-fluid{
     }
     h1{
         font-size: 51px;
+    }
+ }
+
+
+ @media screen and (max-width:400px){
+    .text-intro {
+        padding-top: 200px;
+        /* padding-bottom: 200px; */
+    }
+    .preTxt{
+        font-size: 20px;
     }
  }
