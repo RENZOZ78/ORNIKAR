@@ -301,6 +301,14 @@ h1{
     padding-bottom: auto;
   }
 
+  .box, .circle{
+    margin-right: 40px;
+    margin-left: -40px;
+    padding-left: 10px;
+    height: 100%;
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 500px){
@@ -327,7 +335,7 @@ h1{
 
  @media screen and (max-width:400px){
   .text-intro {
-      padding-top: 150px;
+      padding-top: 120px;
       /* padding-bottom: 200px; */
   }
   .preTxt{
@@ -343,9 +351,9 @@ h1{
   }
 
   .box, .circle{
-    margin-right: 40px;
-    margin-left: -10px;
-    padding-left: 50px;
+    margin-right: 50px;
+    margin-left: -30px;
+    padding-left: 10px;
     height: 100%;
     width: 100%;
   }
