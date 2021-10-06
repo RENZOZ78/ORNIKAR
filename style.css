@@ -1,3 +1,7 @@
+
+body{
+    box-sizing: border-box;
+}
 /*Header*/
 
 header{
@@ -8,8 +12,9 @@ header{
 }
 
 .text-intro{
-    padding-top: 300px;
+    padding-top: 15rem;
     padding-bottom: 200px;
+    text-align: center;
 }
 
 .preTxt{
@@ -296,6 +301,7 @@ img.img-fluid{
     }
     .text-intro{
         padding: 100px auto;
+     
     }
 }
 
@@ -324,7 +330,7 @@ img.img-fluid{
         height: 55vh;
     }
     .text-intro {
-        padding-top: 200px;
+        padding-top: 500px;
     }
     .text-intro a{
         transform: scale(0.8);
