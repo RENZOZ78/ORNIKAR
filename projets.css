@@ -1,5 +1,13 @@
 /*Header*/
 
+*, body, html
+::before,
+::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 header{
     background: url('img/bgphotshop.png')  ;
     background-size: cover;
@@ -9,8 +17,8 @@ header{
 
 .text-intro{
     padding-top: 15rem;
-    
-   
+
+
 }
 
 .preTxt{
@@ -79,9 +87,9 @@ h1{
   }
   .project_text{margin: 0.7rem 0.7rem;}
 
-  .section_title, .section_text{
+  /* .section_title, .section_text{
     padding-left: 30px;
-  }
+  } */
 
   .projects.ptb_2{
 
@@ -158,7 +166,7 @@ h1{
         font-size: 71px;
     }
     .text-intro{
-        padding: 100px auto;        
+        padding: 100px auto;
         text-align: center;
     }
     .section_title, .section_text{
@@ -199,9 +207,34 @@ h1{
   .project {
       display: block;
       margin: 55px auto;
-
-      /* text-align: center; */
+      background-color: rgba(15, 255, 15, 0.5) ;     
+      background-position: 10px;
+      border-radius: 20px;
+      padding: 10px;   
+    
   }
+  .sect_tit_txt{
+     background-color: rgba(230, 0, 115, 0.7) ;     
+      background-position: 10px;
+      border-radius: 20px;
+      padding: 10px 70px ;
+      width: auto;
+      margin: 15px 12px;     
+      text-align: center; 
+  }
+
+  footer{
+    background-color: rgba(255, 102, 0, 0.7) ;     
+    background-position: 10px;
+    border-radius: 20px;
+    padding: 10px 70px ;
+    width: auto;
+    margin: 15px 12px;     
+    text-align: center; 
+  }
+
+      
+
   img{
 display: block;
     width: 80%;
@@ -211,7 +244,23 @@ display: block;
 
   p.project_text{
     text-align: justify;
+    width: 80%;
+    margin: 5% auto;
   }
+
+  h2.titre_site{
+    font-size: 1.9rem;
+    width: 80%;
+    margin: 10px auto;
+  }
+
+ 
+  .text-intro{
+    height: 100%;
+    padding-top: auto;
+    padding-bottom: auto;
+  }
+
 }
 
 @media screen and (max-width: 500px){
@@ -219,7 +268,7 @@ display: block;
         height: 55vh;
     }
     /* .text-intro {
-        /* padding-top: 200px; 
+        /* padding-top: 200px;
     } */
     .text-intro a{
         transform: scale(0.8);
@@ -243,3 +292,4 @@ display: block;
   .preTxt{
       font-size: 20px;
   }
+ }
