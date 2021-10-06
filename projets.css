@@ -6,12 +6,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 header{
     background: url('img/bgphotshop.png')  ;
     background-size: cover;
     background-position: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius:20px;
     height: 95vh;
 }
 
@@ -196,6 +199,12 @@ h1{
 }
 
 @media screen and (max-width: 600px ){
+
+  html{
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .projects_section{
     display: block;
   }
@@ -204,27 +213,55 @@ h1{
     text-align: center;
   }
 
+  #main-nav{
+    border-radius: 20px;
+    padding: 10px;   
+    padding: 10px 70px ;
+    width: auto;
+    margin: 15px 12px;   
+    position: absolute;
+}
+
+  header {
+    display: flex;
+    margin: 55px auto;
+    /* background-color: rgba(15, 255, 15, 0.5) ;      */
+    background-position: 10px;
+    border-radius: 20px;
+    padding: 10px;   
+    padding: 10px 70px ;
+    width: auto;
+    margin: 15px 12px;     
+    text-align: center;   
+}
+
   .project {
       display: block;
       margin: 55px auto;
-      background-color: rgba(15, 255, 15, 0.5) ;     
+      background-color: rgba(15, 255, 15, 0.9) ;     
       background-position: 10px;
       border-radius: 20px;
-      padding: 10px;   
+      padding: 15px;   
     
   }
+
+  .cont_nav{
+    width: 100%;
+    height: fit-content;
+  }
+
   .sect_tit_txt{
-     background-color: rgba(230, 0, 115, 0.7) ;     
+     background-color: rgba(230, 0, 115, 0.9) ;     
       background-position: 10px;
       border-radius: 20px;
       padding: 10px 70px ;
       width: auto;
-      margin: 15px 12px;     
+      margin: 55px 12px 15px;     
       text-align: center; 
   }
 
   footer{
-    background-color: rgba(255, 102, 0, 0.7) ;     
+    background-color: rgba(255, 102, 0, 0.9) ;     
     background-position: 10px;
     border-radius: 20px;
     padding: 10px 70px ;
@@ -232,14 +269,14 @@ h1{
     margin: 15px 12px;     
     text-align: center; 
   }
-
       
 
   img{
-display: block;
+    display: block;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 0;
   }
 
   p.project_text{
@@ -248,16 +285,19 @@ display: block;
     margin: 5% auto;
   }
 
+  h2{
+    font-family: Kaushan;
+  }
+
   h2.titre_site{
     font-size: 1.9rem;
     width: 80%;
     margin: 10px auto;
   }
-
  
   .text-intro{
     height: 100%;
-    padding-top: auto;
+    padding-top: 160px;
     padding-bottom: auto;
   }
 
@@ -278,6 +318,7 @@ display: block;
     }
     .preTxt{
         font-size: 25px;
+        line-height: 100%;
     }
     h1{
         font-size: 51px;
@@ -286,10 +327,28 @@ display: block;
 
  @media screen and (max-width:400px){
   .text-intro {
-      padding-top: 200px;
+      padding-top: 150px;
       /* padding-bottom: 200px; */
   }
   .preTxt{
-      font-size: 20px;
+      font-size: 20px; 
+       
   }
+  .container.cont_nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+  }
+
+  .box, .circle{
+    margin-right: 40px;
+    margin-left: -10px;
+    padding-left: 50px;
+    height: 100%;
+    width: 100%;
+  }
+
+
  }

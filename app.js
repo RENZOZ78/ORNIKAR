@@ -13,7 +13,6 @@ $('.carousel').carousel({
 })
 
 // NAVBAR Animation =si on scroll de plus de 30px a partir du haut, alors la navbar devient opaque et plus petite
-
 $(window).scroll(function(){
     if($(this).scrollTop() > 30){
         $('.navbar').addClass('opaque');
