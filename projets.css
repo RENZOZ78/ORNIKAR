@@ -238,7 +238,7 @@ h1{
   .project {
       display: block;
       margin: 55px auto;
-      background-color: rgba(15, 255, 15, 0.9) ;     
+      background-color: rgba(15, 255, 15, 0.7) ;     
       background-position: 10px;
       border-radius: 20px;
       padding: 15px;   
@@ -304,9 +304,8 @@ h1{
   .box, .circle{
     margin-right: 40px;
     margin-left: -40px;
-    padding-left: 10px;
-    height: 100%;
-    width: 100%;
+  
+    
   }
 
 }
@@ -333,7 +332,7 @@ h1{
     }
  }
 
- @media screen and (max-width:400px){
+ @media screen and (max-width:420px){
   .text-intro {
       padding-top: 120px;
       /* padding-bottom: 200px; */
@@ -349,14 +348,21 @@ h1{
     align-items: center;
     width: 100%;
   }
-
-  .box, .circle{
-    margin-right: 50px;
-    margin-left: -30px;
-    padding-left: 10px;
-    height: 100%;
-    width: 100%;
+  
+  .box{
+    text-align: center;
   }
+
+  .box, .circle {
+   /* margin: 0 auto;
+    padding-left: 50px;
+    height: 100%;
+    width: 100%; */
+    flex-shrink: 0;
+  }
+
+ 
+ 
 
 
  }
