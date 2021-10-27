@@ -281,6 +281,9 @@ h2.promess{
 
 }
 
+/* bouton envoyer */
+
+
 /* progress competences-------------------------- */
 
 #progress{
@@ -306,7 +309,7 @@ h2.competences{
 }
 
 
-/*------------------ MEDIA QUERY */
+/*--- MEDIA QUERY---------------------- */
 
 @media screen and (max-width: 1200px){
     /* header{
@@ -348,7 +351,7 @@ h2.competences{
         font-size: 71px;
     }
     .text-intro{
-        padding: 100px auto;
+        padding: 140px 0 200px;
 
     }
 
@@ -370,7 +373,7 @@ h2.competences{
         font-size: 51px;
     }
     .text-intro{
-        padding-top: 200px ;
+        padding-top: 150px ;
     }
     h2.competences{
       font-size: 70px;
@@ -383,9 +386,9 @@ h2.competences{
     header{
         height: 35vh;
     }
-    .text-intro {
+    /* .text-intro {
         padding-top: 200px;
-    }
+    } */
     .text-intro a{
         transform: scale(0.8);
     }
@@ -398,19 +401,24 @@ h2.competences{
     h1{
         font-size: 51px;
     }
-    /* h2{
-      font-size: 40px;
-      padding-top: 50px;
-    } */
+
  }
 
 
  @media screen and (max-width:400px){
     .text-intro {
-        padding-top: 200px;
-        /* padding-bottom: 200px; */
+        padding-top: 120px;
     }
-    .preTxt{
-        font-size: 20px;
+    h1{
+      padding-top: 20px;
+      font-size: 40px;
     }
+    h2.about, h2.text-center, h2.offreH, h2.competences{
+      font-size: 50px;
+      padding-top: 40px;
+    }
+    .sect_tit_txt{
+      margin: 35px 0;
+    }
+
  }

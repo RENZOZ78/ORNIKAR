@@ -392,5 +392,10 @@ font-family: 'Kaushan Script';
     flex-shrink: 0;
   }
 
+  .sect_tit_txt{
+    margin: 35px 0;
+    height: auto;
+  }
+
 
  }
