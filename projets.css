@@ -6,7 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
+
 }
 
 header{
@@ -15,12 +15,11 @@ header{
     background-position: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius:20px;
-    height: 95vh;
+    height: 55vh;
 }
 
 .text-intro{
     padding-top: 15rem;
-
 
 }
 
@@ -103,6 +102,24 @@ h1{
     display: block;
     justify-content: flex-end;
   }
+
+h2{
+  text-transform: capitalize;
+  color: #0b5ed7;
+  margin-top: 30px;
+  text-shadow: 4px 3px 0px rgba(0,0,0,0.3);
+  font-size: 70px;
+padding-top: 80px;
+padding-bottom: 50px;
+font-family: 'Kaushan Script';
+}
+
+
+  h3{
+    border-bottom: 2px solid;
+    border-bottom-style:
+  }
+
 
 
 
@@ -200,108 +217,127 @@ h1{
 
 @media screen and (max-width: 600px ){
 
-  /* html{
-    width: 100%;
-    margin: 0 auto;
+    /* html{
+      width: 100%;
+      margin: 0 auto;
+    } */
+    .sect_tit_txt{
+      margin:15px 12px 15px;
+    }
+
+  h2.section_title.text-center{
+    font-size: 40px;
+    padding-top: 30px;
+  }
+  p.section_text{
+    padding-top: 0;
+  }
+  h3.titre_site{
+    padding-top: 20px;
+  }
+
+  /* h2{
+    font-size: 40px;
   } */
 
-  .projects_section{
-    display: block;
-  }
-
-  .project_content{
-    text-align: center;
-  }
-
-  #main-nav{
-    border-radius: 20px;
-    padding: 10px;   
-    padding: 10px 70px ;
-    width: auto;
-    margin: 15px 12px;   
-    position: absolute;
-}
-
-  header {
-    display: flex;
-    margin: 55px auto;
-    /* background-color: rgba(15, 255, 15, 0.5) ;      */
-    background-position: 10px;
-    border-radius: 20px;
-    padding: 10px;   
-    padding: 10px 70px ;
-    /* width: auto; */
-    margin: 15px 12px;     
-    text-align: center;   
-}
-
-  .project {
+    .projects_section{
       display: block;
+    }
+
+    .project_content{
+      text-align: center;
+    }
+
+    #main-nav{
+      border-radius: 20px;
+      padding: 10px;
+      padding: 10px 70px ;
+      width: auto;
+      margin: 15px 12px;
+      position: absolute;
+  }
+
+    header {
+      display: flex;
       margin: 55px auto;
-      background-color: rgba(15, 255, 15, 0.7) ;     
+      /* background-color: rgba(15, 255, 15, 0.5) ;      */
       background-position: 10px;
       border-radius: 20px;
-      padding: 15px;       
+      padding: 10px;
+      padding: 10px 70px ;
+      /* width: auto; */
+      margin: 15px 12px;
+      text-align: center;
   }
 
-  .cont_nav{
-    width: 100%;
-    height: fit-content;
-  }
+    .project {
+        display: block;
+        margin: 55px auto;
+        background-color: aquamarine ;
+        background-position: 10px;
+        border-radius: 20px;
+        padding: 15px;
+    }
 
-  .sect_tit_txt{
-     background-color: rgba(230, 0, 115, 0.9) ;     
+    .cont_nav{
+      width: 100%;
+      height: fit-content;
+    }
+
+    .sect_tit_txt{
+       /* background-color: rgba(230, 0, 115, 0.9) ; */
+        background-position: 10px;
+        /* border-radius: 20px; */
+        padding: 10px 70px ;
+        width: auto;
+        margin: 55px 12px 15px;
+        text-align: center;
+    }
+
+    footer{
+      background-color: whitesmoke ;
       background-position: 10px;
       border-radius: 20px;
       padding: 10px 70px ;
       width: auto;
-      margin: 55px 12px 15px;     
-      text-align: center; 
-  }
+      margin: 15px 12px;
+      text-align: center;
+    }
 
-  footer{
-    background-color: rgba(255, 102, 0, 0.9) ;     
-    background-position: 10px;
-    border-radius: 20px;
-    padding: 10px 70px ;
-    width: auto;
-    margin: 15px 12px;     
-    text-align: center; 
-  }      
+    img{
+      display: block;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-  img{
-    display: block;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;    
-  }
+    p.project_text{
+      text-align: justify;
+      width: 80%;
+      margin: 5% auto;
+      font-size: 20px;
+    }
 
-  p.project_text{
-    text-align: justify;
-    width: 80%;
-    margin: 5% auto;
-  }
+    /* h2{
+      font-family: Kaushan;
+    } */
 
-  h2{
-    font-family: Kaushan;
-  }
+    h2.titre_site{
+      font-size: 1.9rem;
+      width: 80%;
+      margin: 10px auto;
+    }
 
-  h2.titre_site{
-    font-size: 1.9rem;
-    width: 80%;
-    margin: 10px auto;
-  }
- 
-  .text-intro{
-    height: 100%;
-    padding-top: 160px;
-    padding-bottom: auto;
-  }
+    .text-intro{
+      height: 100%;
+      padding-top: 160px;
+      padding-bottom: auto;
+    }
 
-  .box, .circle{
-    margin-right: 40px;
-    margin-left: -40px;
-      }
+    .box, .circle{
+      margin-right: 40px;
+      margin-left: -40px;
+        }
 }
 
 @media screen and (max-width: 500px){
@@ -324,7 +360,7 @@ h1{
     h1{
         font-size: 51px;
     }
-   
+
  }
 
  @media screen and (max-width:420px){
@@ -332,10 +368,10 @@ h1{
       padding-top: 120px;
       /* padding-bottom: 200px; */
   }
-  .preTxt{
-      font-size: 20px; 
-       
-  }
+  /* .preTxt{
+      font-size: 20px;
+
+  } */
   .container.cont_nav{
     display: flex;
     justify-content: space-between;
@@ -343,7 +379,7 @@ h1{
     align-items: center;
     /* width: 100%; */
   }
-  
+
   .box{
     text-align: center;
   }
@@ -354,7 +390,7 @@ h1{
     height: 100%;
     width: 100%; */
     flex-shrink: 0;
-  } 
+  }
 
 
  }
