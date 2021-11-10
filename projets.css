@@ -417,7 +417,7 @@ font-family: 'Kaushan Script';
     /* width: 100%; */
   }
 
-  .box{
+  /* .box{
     text-align: center;
   }
 
@@ -425,9 +425,8 @@ font-family: 'Kaushan Script';
    /* margin: 0 auto;
     padding-left: 50px;
     height: 100%;
-    width: 100%; */
-    flex-shrink: 0;
-  }
+    width: 100%;
+  } */
 
   .sect_tit_txt{
     margin: 35px 0;
