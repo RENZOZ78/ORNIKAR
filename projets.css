@@ -367,10 +367,11 @@ font-family: 'Kaushan Script';
       padding-bottom: auto;
     }
 
-    .box, .circle{
+    /* .box, .circle{
       margin-right: 40px;
       margin-left: -40px;
-        }
+			display: none;
+        } */
 }
 
 @media screen and (max-width: 500px){

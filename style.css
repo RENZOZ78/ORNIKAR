@@ -539,6 +539,7 @@ h2.competences{
   .box, .circle{
     margin-right: 40px;
     margin-left: -40px;
+		display: none;
       }
 }
 }
