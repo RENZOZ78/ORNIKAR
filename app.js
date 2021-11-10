@@ -23,6 +23,7 @@ $(window).scroll(function(){
 
 // bouton
 
+
 var c = document.getElementById('canvas');
 var ctx = c.getContext('2d');
 var btn = document.getElementsByClassName('btn')[0];
@@ -136,7 +137,19 @@ return vel;
 var btnTxt = [
 'hehe',
 'ouch!',
-
+'sparkles!',
+'ooh',
+'oooooh',
+'ooooooooooh',
+'HARDER',
+'softer',
+'tenderly',
+'this is getting weird',
+'please stop',
+'"gags"',
+'woof',
+'meow',
+'@Lewitje'
 ];
 
 function changeText(){
