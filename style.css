@@ -443,9 +443,6 @@ h2.competences{
     padding-top: 20px;
   }
 
-  /* h2{
-    font-size: 40px;
-  } */
 
   .projects_section{
     display: block;
@@ -574,7 +571,7 @@ h2.competences{
 }
 
 
- @media screen and (max-width:400px){
+ @media screen and (max-width:420px){
    header{
      padding: 10px 20px;
    }
@@ -589,13 +586,26 @@ h2.competences{
       font-size: 50px;
       padding-top: 40px;
     }
-		.preTxt{
-			font-size: 15px;
+		.container.cont_nav{
+	    display: flex;
+	    justify-content: space-between;
+	    flex-wrap: nowrap;
+	    align-items: center;
+	    /* width: 100%; */
+	  }
+
+		.sect_tit_txt{
+			margin: 35px 0;
+			height: auto;
 		}
-		.btn{
+
+		/* .preTxt{
+			font-size: 15px;
+		} */
+		/* .btn{
 			height: 80%;
 			width: 80%;
-		}
+		} */
 
 
  }

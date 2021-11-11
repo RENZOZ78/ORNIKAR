@@ -250,10 +250,7 @@ font-family: 'Kaushan Script';
 
 @media screen and (max-width: 600px ){
 
-    /* html{
-      width: 100%;
 
-    } */
     .sect_tit_txt{
       margin:15px 12px 15px;
     }
@@ -269,9 +266,6 @@ font-family: 'Kaushan Script';
     padding-top: 20px;
   }
 
-  /* h2{
-    font-size: 40px;
-  } */
 
     .projects_section{
       display: block;
