@@ -60,7 +60,7 @@ header{
 
 .text-intro{
     padding-top: 15rem;
-    padding-bottom: 200px;
+    /* padding-bottom: 200px; */
     text-align: center;
 }
 
@@ -350,6 +350,12 @@ h2.competences{
 
 /*--- MEDIA QUERY---------------------- */
 
+@media screen and (min-width: 1200px){
+	.text-intro h1{
+		margin-bottom: 30px;
+	}
+}
+
 @media screen and (max-width: 1200px){
     /* header{
         height: 75vh;
@@ -373,7 +379,7 @@ h2.competences{
 
     header{
         width: 100%;
-        /* height: 500px; */
+
     }
 
 }
@@ -390,11 +396,16 @@ h2.competences{
         font-size: 71px;
     }
     .text-intro{
-        /* padding: 140px 0 200px; */
+
 				padding: 100px auto;
         text-align: center;
+				
 
     }
+    .section_title, .section_text{
+              text-align: center;
+            }
+
 
 }
 
@@ -414,10 +425,7 @@ h2.competences{
         font-size: 51px;
     }
     .text-intro{
-        /* padding-top: 130px ; */
-				padding: 15rem auto ;
-				/* padding: 100px auto;
-				text-align: center; */
+      padding: 15rem auto ;
     }
     h2.competences{
       font-size: 70px;
@@ -426,9 +434,7 @@ h2.competences{
 
 @media screen and (max-width: 600px){
 
-
-  } */
-  .sect_tit_txt{
+ .sect_tit_txt{
     margin:15px 12px 15px;
   }
 
@@ -469,9 +475,10 @@ h2.competences{
 		border-radius: 20px;
 		padding: 10px;
 		padding: 10px 70px ;
-		/* width: auto; */
+		 width: auto; 
 		margin: 15px 12px;
 		text-align: center;
+
 }
 
   .project {
@@ -495,8 +502,9 @@ h2.competences{
       padding: 10px 70px ;
       width: auto;
       margin: 55px 12px 15px;
-      text-align: center;
+      text-align: center;    
   }
+   
 
   footer{
     background-color: whitesmoke ;
@@ -510,7 +518,7 @@ h2.competences{
 
   img{
     display: block;
-    width: 80%;
+    /* width: 80%; */
     margin-left: auto;
     margin-right: auto;
   }
@@ -534,7 +542,7 @@ h2.competences{
 
   .text-intro{
     height: 100%;
-    padding-top: 150px;
+    padding-top: 20vh;
     padding-bottom: auto;
   }
 
@@ -543,13 +551,13 @@ h2.competences{
     margin-left: -40px;
 		display: none;
       } */
-}
-}
+  }
+ 
 
 
 @media screen and (max-width: 500px){
 	header{
-			height: 55vh;
+			height: 75vh;
 	}
 	/* .text-intro {
 			/* padding-top: 200px;
@@ -567,17 +575,26 @@ h2.competences{
 	h1{
 			font-size: 51px;
 	}
-
 }
 
 
  @media screen and (max-width:420px){
+   
    header{
      padding: 10px 20px;
    }
     .text-intro {
-        padding-top: 120px;
+        padding-top: 100px;
     }
+
+		.container.cont_nav{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+			align-items: center;
+			/* width: 100%; */
+		}
+
     h1{
       padding-top: 20px;
       font-size: 30px;

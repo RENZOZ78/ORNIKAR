@@ -132,6 +132,7 @@ h1{
   }
 
   .btn .btn-larg{
+
     display: block;
     justify-content: flex-end;
   }
@@ -166,6 +167,12 @@ font-family: 'Kaushan Script';
   img{
     width: 400px;
   }
+}
+
+@media screen and (min-width: 1200px){
+	.text-intro h1{
+		margin-bottom: 30px;
+	}
 }
 
 @media screen and (max-width: 1200px){
@@ -284,18 +291,19 @@ font-family: 'Kaushan Script';
       position: absolute;
   }
 
-    header {
-      display: flex;
-      margin: 55px auto;
-      /* background-color: rgba(15, 255, 15, 0.5) ;      */
-      background-position: 10px;
-      border-radius: 20px;
-      padding: 10px;
-      padding: 10px 70px ;
-      /* width: auto; */
-      margin: 15px 12px;
-      text-align: center;
-  }
+  header {
+		display: flex;
+		margin: 55px auto;
+		/* background-color: rgba(15, 255, 15, 0.5) ;      */
+		background-position: 10px;
+		border-radius: 20px;
+		padding: 10px;
+		padding: 10px 70px ;
+		 width: auto; 
+		margin: 15px 12px;
+		text-align: center;
+
+}
 
     .project {
         display: block;
@@ -333,7 +341,7 @@ font-family: 'Kaushan Script';
 
     img{
       display: block;
-      width: 80%;
+      /* width: 80%; */
       margin-left: auto;
       margin-right: auto;
     }
@@ -357,7 +365,7 @@ font-family: 'Kaushan Script';
 
     .text-intro{
       height: 100%;
-      padding-top: 160px;
+      padding-top: 20vh;
       padding-bottom: auto;
     }
 
@@ -369,63 +377,64 @@ font-family: 'Kaushan Script';
 }
 
 @media screen and (max-width: 500px){
-    header{
-        height: 55vh;
-    }
-    /* .text-intro {
-        /* padding-top: 200px;
-    } */
-    .text-intro a{
-        transform: scale(0.8);
-    }
-    .navbar-brand{
-        font-size: 35px!important;
-    }
-    .preTxt{
-        font-size: 25px;
-        line-height: 100%;
-    }
-    h1{
-        font-size: 51px;
-    }
+  header{
+    height: 75vh;
+}
+/* .text-intro {
+    /* padding-top: 200px;
+} */
+.text-intro a{
+    transform: scale(0.8);
+}
+.navbar-brand{
+    font-size: 35px!important;
+}
+.preTxt{
+    font-size: 25px;
+    line-height: 100%;
+}
+h1{
+    font-size: 51px;
+}
 
  }
 
  @media screen and (max-width:420px){
-   header{
-     padding: 10px 20px;
+  header{
+    padding: 10px 20px;
+  }
+   .text-intro {
+       padding-top: 70px;
    }
-  .text-intro {
-      padding-top: 120px;
-      /* padding-bottom: 200px; */
-  }
-  /* .preTxt{
-      font-size: 20px;
 
-  } */
-  .container.cont_nav{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    align-items: center;
-    /* width: 100%; */
-  }
+   .container.cont_nav{
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: nowrap;
+     align-items: center;
+     /* width: 100%; */
+   }
 
-  /* .box{
-    text-align: center;
-  }
+   h1{
+     padding-top: 20px;
+     font-size: 30px;
+   }
+   h2.about, h2.text-center, h2.offreH, h2.competences{
+     font-size: 50px;
+     padding-top: 40px;
+   }
+   .container.cont_nav{
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: nowrap;
+     align-items: center;
+     /* width: 100%; */
+   }
 
-  .box, .circle {
-   /* margin: 0 auto;
-    padding-left: 50px;
-    height: 100%;
-    width: 100%;
-  } */
-
-  .sect_tit_txt{
-    margin: 35px 0;
-    height: auto;
-  }
+   .sect_tit_txt{
+     margin: 35px 0;
+     height: auto;
+   }
 
 
  }
