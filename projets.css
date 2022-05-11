@@ -53,6 +53,7 @@ header{
 
 .text-intro{
     padding-top: 15rem;
+    text-align: center;
 
 }
 
@@ -151,13 +152,20 @@ font-family: 'Kaushan Script';
 
   h3{
     border-bottom: 2px solid;
-    border-bottom-style:
+    /* border-bottom-style: */
   }
 
 
 
 
-/****************************** MEDIA QUERY */
+/* ***************************** MEDIA QUERY */
+
+
+@media screen and (min-width: 1200px){
+	.text-intro h1{
+		margin-bottom: 30px;
+	}
+}
 
 @media screen and (min-width: 990px){
 
@@ -176,9 +184,7 @@ font-family: 'Kaushan Script';
 }
 
 @media screen and (max-width: 1200px){
-    /* header{
-        height: 75vh;
-    } */
+    
     .preTxt{
         font-size: 40px;
 
@@ -214,10 +220,22 @@ font-family: 'Kaushan Script';
 
 }
 
+@media screen and (min-width: 800px){
+
+  h1{
+    font-size: 90px;
+  }
+  header{
+    height: fit-content;
+    padding: 15px;
+  }
+}
+
 @media screen and (max-width: 800px){
-    header{
-        height: 75vh;
-    }
+  header{
+    height: fit-content;
+    padding: 15px;
+  }
     .preTxt{
         font-size: 30px;
 
@@ -236,9 +254,9 @@ font-family: 'Kaushan Script';
 }
 
 @media screen and (max-width: 762px){
-    header{
+    /* header{
         height: 55vh;
-    }
+    } */
    #progress{
        padding-top : 30px;
        padding-bottom: 30px;
@@ -253,6 +271,12 @@ font-family: 'Kaushan Script';
     .text-intro{
         padding: 15rem auto ;
     }
+}
+
+@media screen and (min-width: 600px){
+  .text-intro{
+    padding-top: 10rem  ;
+  }
 }
 
 @media screen and (max-width: 600px ){
@@ -292,18 +316,17 @@ font-family: 'Kaushan Script';
   }
 
   header {
-		display: flex;
-		margin: 55px auto;
-		/* background-color: rgba(15, 255, 15, 0.5) ;      */
-		background-position: 10px;
+		/* display: flex; */
+		/* margin: 55px auto;  */
+		 background-color: rgba(15, 255, 15, 0.5);      
+		 background-position: 10px; 
 		border-radius: 20px;
-		padding: 10px;
-		padding: 10px 70px ;
+		/* padding: 10px;*/
+		/* padding: 10px 70px ; */
 		 width: auto; 
-		margin: 15px 12px;
-		text-align: center;
-
-}
+		margin: 0 12px;
+		/* text-align: center;   */
+ } 
 
     .project {
         display: block;
@@ -377,9 +400,9 @@ font-family: 'Kaushan Script';
 }
 
 @media screen and (max-width: 500px){
-  header{
+  /* header{
     height: 75vh;
-}
+} */
 /* .text-intro {
     /* padding-top: 200px;
 } */
@@ -400,9 +423,9 @@ h1{
  }
 
  @media screen and (max-width:420px){
-  header{
+  /* header{
     padding: 10px 20px;
-  }
+  } */
    .text-intro {
        padding-top: 70px;
    }

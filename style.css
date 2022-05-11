@@ -350,6 +350,8 @@ h2.competences{
 
 /*--- MEDIA QUERY---------------------- */
 
+
+
 @media screen and (min-width: 1200px){
 	.text-intro h1{
 		margin-bottom: 30px;
@@ -357,9 +359,7 @@ h2.competences{
 }
 
 @media screen and (max-width: 1200px){
-    /* header{
-        height: 75vh;
-    } */
+   
     .preTxt{
         font-size: 40px;
 
@@ -377,17 +377,26 @@ h2.competences{
             margin: 0 auto 30px;
         }
 
-    header{
-        width: 100%;
-
-    }
+   
 
 }
 
+@media screen and (min-width: 800px){
+
+  h1{
+    font-size: 90px;
+  }
+  header{
+    height: fit-content;
+    padding: 15px;
+  }
+}
+
 @media screen and (max-width: 800px){
-    header{
-        height: 75vh;
-    }
+  header{
+    height: fit-content;
+    padding: 15px;
+  }
     .preTxt{
         font-size: 30px;
 
@@ -410,9 +419,7 @@ h2.competences{
 }
 
 @media screen and (max-width: 762px){
-    header{
-        height: 55vh;
-    }
+    
    #progress{
        padding-top : 30px;
        padding-bottom: 30px;
@@ -430,6 +437,12 @@ h2.competences{
     h2.competences{
       font-size: 70px;
     }
+}
+
+@media screen and (min-width: 600px){
+  .text-intro{
+    padding-top: 10rem  ;
+  }
 }
 
 @media screen and (max-width: 600px){
@@ -467,19 +480,18 @@ h2.competences{
 		position: absolute;
 }
 
-	header {
-		display: flex;
-		margin: 55px auto;
-		/* background-color: rgba(15, 255, 15, 0.5) ;      */
-		background-position: 10px;
+	 header {
+		/* display: flex; */
+		/* margin: 55px auto;  */
+		 background-color: rgba(15, 255, 15, 0.5);      
+		 background-position: 10px; 
 		border-radius: 20px;
-		padding: 10px;
-		padding: 10px 70px ;
+		/* padding: 10px;*/
+		/* padding: 10px 70px ; */
 		 width: auto; 
-		margin: 15px 12px;
-		text-align: center;
-
-}
+		margin: 0 12px;
+		/* text-align: center;   */
+ } 
 
   .project {
       display: block;
@@ -556,12 +568,7 @@ h2.competences{
 
 
 @media screen and (max-width: 500px){
-	header{
-			height: 75vh;
-	}
-	/* .text-intro {
-			/* padding-top: 200px;
-	} */
+
 	.text-intro a{
 			transform: scale(0.8);
 	}
@@ -580,9 +587,7 @@ h2.competences{
 
  @media screen and (max-width:420px){
    
-   header{
-     padding: 10px 20px;
-   }
+ 
     .text-intro {
         padding-top: 100px;
     }
