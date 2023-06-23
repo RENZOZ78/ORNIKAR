@@ -16,6 +16,10 @@
 
         </script>
 
+        
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
+
         <!--Police de caractère-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -44,10 +48,10 @@
 
                         <!-- <div class="box">
                             <div class="circle">
-                                <a href="index.html" class=" nav-circle" >WebyCloudy</a>
+                                <a href="index.php" class=" nav-circle" >WebyCloudy</a>
                             </div>
                         </div> -->
-                        <a href="index.html" class="navbar-brand" >WebyCloudy</a>
+                        <a href="index.php" class="navbar-brand" >WebyCloudy</a>
                         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                             <span class="navbar-toggler-icon" ></span>
                         </button>
@@ -56,18 +60,18 @@
                                 <li class="nav-item mr-1">
                                     <a href="#top" class="nav-link">Accueil</a>
                                 </li>
-                                <li class="nav-item mr-1">
+                                <!-- <li class="nav-item mr-1">
                                     <a href="#aPropos" class="nav-link">Concept</a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item mr-1">
                                     <a href="#projets" class="nav-link">Nos projets</a>
                                 </li>
-                                <li class="nav-item mr-1">
+                                <!-- <li class="nav-item mr-1">
                                     <a href="#prix" class="nav-link">Tarifs</a>
-                                </li>
-                                <li class="nav-item mr-1">
+                                </li> -->
+                                <!-- <li class="nav-item mr-1">
                                     <a href="#contact" class="nav-link">Contact</a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -78,7 +82,7 @@
                 <div class="text-intro">
                     <div class="preTxt font-italic">Vos idées sont notre inspiration</div>
                     <h1>Agence WebyCloudy</h1>
-                    <a href="index.html" class="btn btn-dark mt-3">En savoir Plus</a>
+                    <a href="index.php" class="btn btn-dark mt-3">En savoir Plus</a>
                     <a href="projets.html"
                       class=" btn-wrapper btn btn-outline-dark mt-3"
                       id="canvas"

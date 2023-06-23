@@ -156,6 +156,12 @@ font-family: 'Kaushan Script';
     /* border-bottom-style: */
   }
 
+  /***************** FOOTER *******************/
+footer{
+  background-color: #0d6efd; 
+  color: white;
+}
+
 
 
 
@@ -354,7 +360,8 @@ font-family: 'Kaushan Script';
     }
 
     footer{
-      background-color: whitesmoke ;
+      background-color: #0d6efd; 
+      color: white;
       background-position: 10px;
       border-radius: 20px;
       padding: 10px 70px ;
