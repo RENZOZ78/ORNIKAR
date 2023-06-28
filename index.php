@@ -19,23 +19,16 @@
         switch($page){
           case "accueil": $mainController->accueil();
           break;
-
           case "entreprises": $mainController->entreprise();
           break;
-
           case "sites": $mainController->site();
           break;
-
           case "reseaux": $mainController->reseaux();
           break;
-
           case "contact":  $mainController->contact();
           break;
-
           default: throw new exception( "la page n'existe pas du tout");
-
         }
-
 
       } catch (\Exception $e) {
         $mainController->pageErreur($e->getMessage());

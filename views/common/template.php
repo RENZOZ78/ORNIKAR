@@ -45,11 +45,14 @@
       <!-- affichage du contenu ------------------------------>
 
          <?= $page_content; ?>
+        
+
+
 
 
       <!-- footer ----------------------------------------->
       <?php
-          include "inc/footer.php";
+          include "./inc/footer.php";
       ?>
 
 

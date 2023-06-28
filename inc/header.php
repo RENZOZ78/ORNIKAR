@@ -6,14 +6,14 @@
 
              <div class="container cont_nav">
 
-                 <a href="index.html" class="navbar-brand" >WebyCloudy</a>
+                 <a href="accueil" class="navbar-brand" >WebyCloudy</a>
                  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                      <span class="navbar-toggler-icon" ></span>
                  </button>
                  <div class="collapse navbar-collapse" id="navbarCollapse">
                      <ul class="navbar-nav ml-auto">
                          <li class="nav-item mr-1">
-                             <a href="#top" class="nav-link">Accueil</a>
+                             <a href="accueil" class="nav-link">Accueil</a>
                          </li>
                           <!-- <li class="nav-item mr-1">
                              <a href="#aPropos" class="nav-link">Concept</a>
@@ -22,15 +22,15 @@
                              <a href="entreprises" class="nav-link">Gestion d'entreprise</a>
                          </li>
                          <li class="nav-item mr-1">
-                             <a href="projets.php" class="nav-link">Site internet</a>
+                             <a href="sites" class="nav-link">Site internet</a>
                          </li>
 
                          <li class="nav-item mr-1">
-                             <a href="reseau.php" class="nav-link">Réseaux sociaux</a>
+                             <a href="reseaux" class="nav-link">Réseaux sociaux</a>
                          </li>
 
                          <li class="nav-item mr-1">
-                             <a href="contact.php" class="nav-link">Contact</a>
+                             <a href="contact" class="nav-link">Contact</a>
                          </li>
                      </ul>
                  </div>

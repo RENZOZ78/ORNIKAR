@@ -1,126 +1,87 @@
 <?php
   class MainController{
-
+    private function genererPage($data){
+      extract($data);//creer la variable directement
+      ob_start();
+      require_once($view);
+      $page_content = ob_get_clean();
+      require_once($template);
+    }
 
     public  function accueil(){
-      $page_description = "Weby cloudy vous permet de mettre en avant votre activité sur le web. Vous obtiendrez de nouveaux clients sur votre site internet et votre  notoriété grandira sur les réseaux sociaux.
-      Weby Cloudy vous propose en outre de vous accompagner dans la création et la gestion de votre société" ;
-
-      $costum_css= "style.css";
-
-      $uvp= "Vos idées sont nos inspirations";
-
-      $page_title= "WebyCloudy ";
-
-      $H1= "Accueil";
-
-      $header_content=  include "inc/header.php";
-
-      $page_content=  include "inc/content_projets.php";
-
-        require_once("views/common/template.php");
-
+      //tableaux qui regroupent les valriable et ses valeurs
+      $data_page = [
+        //"header_content"=> "./inc/header.php",
+        "view" => "./views/accueil.view.php",
+        "costum_css" => "style.css",
+        "H1" => "Accueil",
+        "uvp"=> "Vos idées sont nos inspirations",
+        "page_title"=> "WebyCloudy | Accueil ",
+        "template" => "views/common/template.php"
+      ];
+      $this->genererPage($data_page);
     }
 
     public function entreprise(){
-      $page_description = "
-      Weby Cloudy vous propose en outre de vous accompagner dans la création et la gestion de votre société" ;
 
-      $costum_css= "projets.css";
-
-      $uvp= "Profitez de la puissance de votre site web";
-
-      $page_title= "WebyCloudy | société";
-
-      $H1= "Création de société";
-
-      $header_content=  include "inc/header.php";
-
-      $page_content=  include "inc/content_projets.php";
-
-      //include ("inc/content_accueil.php");
-      require_once("views/common/template.php");
-
+      $data_page = [
+        "view" => "./views/entreprise.view.php",
+        "costum_css" => "style.css",
+        "H1" => "Créer votre société",
+        "uvp"=> "Vos projets sont nos inspirations",
+        "page_title"=> "WebyCloudy | Société ",
+        "template" => "views/common/template.php"
+      ];
+      $this->genererPage($data_page);
     }
 
     public function site(){
-      $page_description = "Weby cloudy vous permet de mettre en avant votre activité sur le web. Vous obtiendrez de nouveaux clients sur votre site internet et votre  notoriété grandira sur les réseaux sociaux.
-      Weby Cloudy vous propose en outre de vous accompagner dans la création et la gestion de votre société" ;
-
-      $costum_css= "projets.css";
-
-      $uvp= "Profitez de la puissance de votre site web";
-
-      $page_title= "WebySites";
-
-      $H1= "Créez votre site internet";
-
-      $header_content=  include "inc/header.php";
-
-      $page_content=  include "inc/content_projets.php";
-
-      //include ("inc/content_accueil.php");
-      require_once("views/common/template.php");
-
+      $data_page = [
+        "view" => "./views/site.view.php",
+        "costum_css" => "projets.css",
+        "H1" => "Créer votre site internet",
+        "uvp"=> "Profitez de la puissance de votre site web",
+        "page_title"=> "WebyCloudy | Site ",
+        "template" => "views/common/template.php"
+      ];
+      $this->genererPage($data_page);
     }
 
     public function reseaux(){
-      $page_description = "Weby cloudy vous permet de mettre en avant votre activité sur le web. Vous obtiendrez de nouveaux clients sur votre site internet et votre  notoriété grandira sur les réseaux sociaux.
-      Weby Cloudy vous propose en outre de vous accompagner dans la création et la gestion de votre société" ;
-
-      $costum_css= "projets.css";
-
-      $uvp= "Profitez de votre audience sur réseaux sociaux";
-
-      $page_title= "WebySites";
-
-      $H1= "Reseaux sociaux";
-
-      $header_content=  include "inc/header.php";
-
-      $page_content=  include "inc/content_projets.php";
-
-      //include ("inc/content_accueil.php");
-      require_once("views/common/template.php");
+      $data_page = [
+        "view" => "./views/reseau.view.php",
+        "costum_css" => "projets.css",
+        "H1" => "Les réseaux sociaux",
+        "uvp"=> "Profitez de votre audience sur les réseaux sociaux",
+        "page_title"=> "WebyCloudy | Reseaux sociaux ",
+        "template" => "views/common/template.php"
+      ];
+      $this->genererPage($data_page);
     }
 
     public function contact(){
-      $page_description = "Weby cloudy vous permet de mettre en avant votre activité sur le web. Vous obtiendrez de nouveaux clients sur votre site internet et votre  notoriété grandira sur les réseaux sociaux.
-      Weby Cloudy vous propose en outre de vous accompagner dans la création et la gestion de votre société" ;
-
-      $costum_css= "projets.css";
-
-      $uvp= "Contactez nous pour toute question";
-
-      $page_title= "WebySites";
-
-      $H1= "Contact";
-
-      $header_content=  include "inc/header.php";
-
-      $page_content=  include "inc/content_projets.php";
-
-      //include ("inc/content_accueil.php");
-      require_once("views/common/template.php");
+      $data_page = [
+        "view" => "./views/contact.view.php",
+        "costum_css" => "projets.css",
+        "H1" => "Contact",
+        "uvp"=> "Restons en contact",
+        "page_title"=> "WebyCloudy | Contact ",
+        "template" => "views/common/template.php"
+      ];
+      $this->genererPage($data_page);
     }
 
     public function pageErreur($msg){
-      $page_description = "Page permettant de gérer les erreurs" ;
+      $data_page = [
+        "view" => "./views/error.view.php",
+        "costum_css" => "projets.css",
+        "H1" => "Page erreur",
+        "uvp"=> "Contactez nous pour toute question",
+        "page_title"=> "WebyCloudy | Page erreur ",
+        "template" => "views/common/template.php"
+      ];
+      $this->genererPage($data_page);
 
-      $costum_css= "projets.css";
-
-      $uvp= "Contactez nous pour toute question";
-
-      $page_title= "WebySites | Page erreur";
-
-      $H1= "Page d'erreur";
-
-      $header_content=  include "inc/header.php";
-
-      $page_content= $msg;
-
-      //include ("inc/content_accueil.php");
-      require_once("views/common/template.php");
     }
   }
  ?>
