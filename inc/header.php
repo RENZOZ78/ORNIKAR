@@ -15,17 +15,22 @@
                          <li class="nav-item mr-1">
                              <a href="#top" class="nav-link">Accueil</a>
                          </li>
-                          <li class="nav-item mr-1">
+                          <!-- <li class="nav-item mr-1">
                              <a href="#aPropos" class="nav-link">Concept</a>
+                         </li> -->
+                         <li class="nav-item mr-1">
+                             <a href="entreprises" class="nav-link">Gestion d'entreprise</a>
                          </li>
                          <li class="nav-item mr-1">
-                             <a href="projets.php" class="nav-link">Nos projets</a>
+                             <a href="projets.php" class="nav-link">Site internet</a>
                          </li>
+
                          <li class="nav-item mr-1">
-                             <a href="#prix" class="nav-link">Tarifs</a>
+                             <a href="reseau.php" class="nav-link">Réseaux sociaux</a>
                          </li>
+
                          <li class="nav-item mr-1">
-                             <a href="#contact" class="nav-link">Contact</a>
+                             <a href="contact.php" class="nav-link">Contact</a>
                          </li>
                      </ul>
                  </div>
@@ -33,11 +38,12 @@
          </nav>
 
          <div class="text-intro">
-             <div class="preTxt font-italic">Vos idées sont notre inspiration</div>
-             <h1>Agence  WebyCloudy</h1>
+             <div class="preTxt font-italic"><?= $uvp; ?></div>
+             <h1><?= $H1; ?></h1>
              <a href="index.html" class=" btn btn_nav btn-dark mt-3">En savoir Plus</a>
              <a href="projets.php" class=" btn btn_nav btn-outline-dark mt-3">Nos projets</a>
          </div>
+
 
      </div>
  </header>

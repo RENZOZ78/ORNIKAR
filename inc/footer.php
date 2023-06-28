@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col">
                 <p>Tout Droits Réservés &copy
-                    <span id="year">WebyCloudy 2022</span>
+                    <span id="year">WebyCloudy 2023</span>
                 </p>
             </div>
         </div>

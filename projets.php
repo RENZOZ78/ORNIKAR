@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +17,7 @@
 
         </script>
 
-        
+
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
 
@@ -37,10 +38,20 @@
 
     </head>
 
+    <?php
+
+      $page_description = "Weby cloudy vous permet de mettre en avant votre activité sur le web. Vous obtiendrez de nouveaux clients sur votre site internet et votre  notoriété grandira sur les réseaux sociaux.
+      Weby Cloudy vous propose en outre de vous accompagner dans la création et la gestion de votre société" ;
+      $page_title= "Weby ";
+      $page_content= "BONJOUR";
+      include ("inc/content_accueil.php");
+      require_once("views/common/template.php");
+     ?>
+
     <body>
     <!-- header, Navigation, titre ------------------------------------------------------->
         <header id="top" >
-            <div class="container "  >
+            <div class="container " >
 
                 <nav class="navbar navbar-expand-md bg-primary navbar-dark fixed-top" id="main-nav">
 
@@ -64,7 +75,7 @@
                                     <a href="#aPropos" class="nav-link">Concept</a>
                                 </li> -->
                                 <li class="nav-item mr-1">
-                                    <a href="#projets" class="nav-link">Nos projets</a>
+                                    <a href="#projets" class="nav-link">Sites internet</a>
                                 </li>
                                 <!-- <li class="nav-item mr-1">
                                     <a href="#prix" class="nav-link">Tarifs</a>
@@ -77,7 +88,7 @@
                     </div>
                 </nav>
 
-                ul>li*3 
+                ul>li*3
 
                 <div class="text-intro">
                     <div class="preTxt font-italic">Vos idées sont notre inspiration</div>
@@ -91,58 +102,7 @@
             </div>
         </header>
 
-<!-- section projets--------------------------------------------------------- -->
 
-        <section id="projets" class="projects_section text_center ptb_3">
-
-            <div class="sect_tit_txt">
-                <h2 class="section_title text-center ">Nos exemples de sites</h2>
-                <p class="section_text text-center ">Vous trouverez ici quelques models de nos sites internets...</p>
-            </div>
-
-            <div class="container">
-
-                <div class="projects ptb_2">
-
-                    <div class="project" >
-                        <img src="img/gym-accueil.jpg" class="gym-accueil-img"  alt="Fiteos" height="190px" width="320px" data-aos="zoom-in" >
-                        <div class="project_content">
-                            <h3 class="titre_site" data-aos="fade-right"  >Salle  de sport </h3>
-                            <p class="project_text " data-aos="fade-up"
-        data-aos-anchor-placement="top-center" >Fiteos est un site commercial pour salle de sport. </p>
-                            <a href="https://cocky-einstein-d0b9f5.netlify.app/" class="btn btn-lg btn-primary btn_project_section" data-aos="fade-up" ><i class="fas fa-eye"></i>Démo</a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <img src="img/img-portfolio2.jpg" alt="delta-immo" height="190px" width="320px" data-aos="zoom-in" >
-                        <div class="project_content">
-                            <h3 class="titre_site" data-aos="fade-right" text-center >Agence immobilière </h2>
-                            <p class="project_text" data-aos="fade-up" >Delta-Immo est un site d'agence immobilière qui vous propose des biens d'exception. </p>
-                            <a href="https://relaxed-lewin-d05331.netlify.app/" class="btn btn-lg btn-primary btn_project_section" data-aos="fade-up" ><i class="fas fa-eye"></i>Démo</a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <img src="img/magic-food-cap.png" alt="Magic food panam" height="190px" width="320px" data-aos="zoom-in" >
-                        <div class="project_content">
-                            <h3 class="titre_site" data-aos="fade-right" text-center >Restauration </h2>
-                            <p class="project_text" data-aos="fade-up" >Magic food panam est site  de restaurant en ligne. Magic food panam propose une grande variété de délicieux plats.</p>
-                            <a href="https://elaborate-dango-33f458.netlify.app/" class="btn btn-lg btn-primary btn_project_section" data-aos="fade-up" ><i class="fas fa-eye"></i>Démo</a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <img src="img/dif-cap.png" alt="Dorine Invest" height="190px" width="320px" data-aos="zoom-in" >
-                        <div class="project_content">
-                            <h3 class="titre_site" data-aos="fade-right" text-center >Finance </h2>
-                            <p class="project_text" data-aos="fade-up" >Dofinvest est site de services financiers pour particuliers et entreprises. </p>
-                            <a href="https://dofinvest.fr/" class="btn btn-lg btn-primary btn_project_section" data-aos="fade-up" ><i class="fas fa-eye"></i>Démo</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
 
         <!-- footer -->
         <footer class="text-center p-4">
@@ -158,25 +118,7 @@
         </footer>
 
 
-        <!-- Scripts-------------------------------------------------------------------- -->
-            <!-- js bootstrap -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-            <!-- js ekko -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
-        <script src="app.js"></script>
-            <!-- aos-librarie -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+    
 
     </body>
 </html>
