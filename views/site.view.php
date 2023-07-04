@@ -11,6 +11,14 @@
       $header_content=  include "./inc/header.php";
       $page_content=  include "./inc/content_site.php";
 
-
-
      ?>
+
+     <?php foreach ($produit as $ligne ) : ?>
+       <br>
+       -----------
+       <br>
+       Produit 1: <?= $ligne["creation"];?>
+       <br>
+       Produit 2: <?= $ligne["Business_plan"];?>
+       <br>
+     <?php endforeach; ?>

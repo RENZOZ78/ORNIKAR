@@ -13,11 +13,9 @@
                  <div class="collapse navbar-collapse" id="navbarCollapse">
                      <ul class="navbar-nav ml-auto">
                          <li class="nav-item mr-1">
-                             <a href="accueil" class="nav-link">Accueil</a>
+                             <a href="accueils" class="nav-link">Accueil</a>
                          </li>
-                          <!-- <li class="nav-item mr-1">
-                             <a href="#aPropos" class="nav-link">Concept</a>
-                         </li> -->
+
                          <li class="nav-item mr-1">
                              <a href="entreprises" class="nav-link">Gestion d'entreprise</a>
                          </li>

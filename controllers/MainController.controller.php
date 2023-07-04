@@ -1,5 +1,15 @@
 <?php
+
+require_once("models/MainManager.model.php");
+
+
   class MainController{
+    private $mainManager;
+
+    public function __construct(){
+      $this->mainManager = new MainManager();
+    }
+
     private function genererPage($data){
       extract($data);//creer la variable directement
       ob_start();
@@ -9,11 +19,14 @@
     }
 
     public  function accueil(){
+      //recuperation des données de la variables data de l'instance mainManager
+        $produits = $this->mainManager->getProduits();
+
       //tableaux qui regroupent les valriable et ses valeurs
       $data_page = [
-        //"header_content"=> "./inc/header.php",
         "view" => "./views/accueil.view.php",
         "costum_css" => "style.css",
+        "produits" => $produits,
         "H1" => "Accueil",
         "uvp"=> "Vos idées sont nos inspirations",
         "page_title"=> "WebyCloudy | Accueil ",
@@ -23,7 +36,6 @@
     }
 
     public function entreprise(){
-
       $data_page = [
         "view" => "./views/entreprise.view.php",
         "costum_css" => "style.css",
@@ -36,10 +48,12 @@
     }
 
     public function site(){
+        $produits = $this->mainManager->getProduit();
       $data_page = [
         "view" => "./views/site.view.php",
         "costum_css" => "projets.css",
         "H1" => "Créer votre site internet",
+          "produit" => $produit,
         "uvp"=> "Profitez de la puissance de votre site web",
         "page_title"=> "WebyCloudy | Site ",
         "template" => "views/common/template.php"

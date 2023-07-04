@@ -9,6 +9,8 @@
         //test routage
         if(empty($_GET['page'])){
            echo "page d'accueil";
+           header("location:accueil");
+
         } else{
            echo "autres pages";
            $url= explode("/", filter_var($_GET['page'],FILTER_SANITIZE_URL));
@@ -17,7 +19,7 @@
 
         //routage vers les différentes page_description
         switch($page){
-          case "accueil": $mainController->accueil();
+          case "accueils": $mainController->accueil();
           break;
           case "entreprises": $mainController->entreprise();
           break;
