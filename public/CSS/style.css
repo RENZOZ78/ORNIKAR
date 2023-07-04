@@ -80,6 +80,11 @@ h1{
 
 }
 
+.alert-success{
+	top: 20px;
+}
+
+
 
 /*------------------------------NAVIGATION: la navigation va se retrecir quand on va sroller sur le contenue + animation en js */
 
@@ -350,7 +355,7 @@ h2.competences{
 
 /* FOOTER*/
 footer{
-  background-color: #0d6efd; 
+  background-color: #0d6efd;
   color: white;
 }
 
@@ -366,7 +371,7 @@ footer{
 }
 
 @media screen and (max-width: 1200px){
-   
+
     .preTxt{
         font-size: 40px;
 
@@ -384,7 +389,7 @@ footer{
             margin: 0 auto 30px;
         }
 
-   
+
 
 }
 
@@ -415,7 +420,7 @@ footer{
 
 				padding: 100px auto;
         text-align: center;
-				
+
 
     }
     .section_title, .section_text{
@@ -426,7 +431,7 @@ footer{
 }
 
 @media screen and (max-width: 762px){
-    
+
    #progress{
        padding-top : 30px;
        padding-bottom: 30px;
@@ -490,15 +495,15 @@ footer{
 	 header {
 		/* display: flex; */
 		/* margin: 55px auto;  */
-		 background-color: rgba(15, 255, 15, 0.5);      
-		 background-position: 10px; 
+		 background-color: rgba(15, 255, 15, 0.5);
+		 background-position: 10px;
 		border-radius: 20px;
 		/* padding: 10px;*/
 		/* padding: 10px 70px ; */
-		 width: auto; 
+		 width: auto;
 		margin: 0 12px;
 		/* text-align: center;   */
- } 
+ }
 
   .project {
       display: block;
@@ -521,13 +526,13 @@ footer{
       padding: 10px 70px ;
       width: auto;
       margin: 55px 12px 15px;
-      text-align: center;    
+      text-align: center;
   }
-   
+
 
   footer{
     /* background-color: whitesmoke ;*/
-    background-color: #0d6efd; 
+    background-color: #0d6efd;
     color: white;
     background-position: 10px;
     border-radius: 20px;
@@ -573,7 +578,7 @@ footer{
 		display: none;
       } */
   }
- 
+
 
 
 @media screen and (max-width: 500px){
@@ -595,8 +600,8 @@ footer{
 
 
  @media screen and (max-width:420px){
-   
- 
+
+
     .text-intro {
         padding-top: 100px;
     }

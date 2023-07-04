@@ -35,6 +35,7 @@
              </div>
          </nav>
 
+
          <div class="text-intro">
              <div class="preTxt font-italic"><?= $uvp; ?></div>
              <h1><?= $H1; ?></h1>

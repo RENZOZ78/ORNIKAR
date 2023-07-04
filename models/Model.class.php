@@ -4,7 +4,7 @@
     private static $pdo;
 
     private static function setBdd(){
-      self::$pdo = new PDO("mysql:host=localhost, dbname=Webycloudy;charset=utf8", "root", "");
+      self::$pdo = new PDO("mysql:host=127.0.0.1, dbname=Webycloudy;charset=utf8", "root", "");
       self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     }
 

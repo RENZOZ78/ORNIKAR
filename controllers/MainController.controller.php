@@ -19,13 +19,18 @@ require_once("models/MainManager.model.php");
     }
 
     public  function accueil(){
+      $_SESSION['alert'] = [
+        "message" => "Vous êtes au bon endroit pour booster la mise en oeuvre de vos projets",
+        "type" => "alert-success"
+      ];
+
       //recuperation des données de la variables data de l'instance mainManager
         $produits = $this->mainManager->getProduits();
 
       //tableaux qui regroupent les valriable et ses valeurs
       $data_page = [
         "view" => "./views/accueil.view.php",
-        "costum_css" => "style.css",
+        "costum_css" => ["style.css", "accueil.css"],
         "produits" => $produits,
         "H1" => "Accueil",
         "uvp"=> "Vos idées sont nos inspirations",
@@ -36,6 +41,11 @@ require_once("models/MainManager.model.php");
     }
 
     public function entreprise(){
+      $_SESSION['alert'] = [
+        "message" => "Il est urgent que vous créer votre société",
+        "type" => "alert-danger"
+      ];
+
       $data_page = [
         "view" => "./views/entreprise.view.php",
         "costum_css" => "style.css",
@@ -48,7 +58,7 @@ require_once("models/MainManager.model.php");
     }
 
     public function site(){
-        $produits = $this->mainManager->getProduit();
+        $produit = $this->mainManager->getProduits();
       $data_page = [
         "view" => "./views/site.view.php",
         "costum_css" => "projets.css",
