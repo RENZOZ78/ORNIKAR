@@ -13,15 +13,15 @@
       <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.0/dist/bootstrap-table.min.css">
 
       <!--Custom css-->
-      <link  href="<?= URL ?>public/CSS/style.css" rel="stylesheet"/>
-       <?php if(!empty($costum_css)) : ?>
-         <?php foreach ($costum_css as $fichier_css): ?>
-           <link  href="<?= URL?>public/CSS/<?= $fichier_css; ?>" rel="stylesheet"/>
+      <link  href="<?= URL; ?>public/CSS/style.css" rel="stylesheet"/>
+       <?php if(!empty($custom_css)) : ?>
+         <?php foreach($custom_css as $no_css ) : ?>
+           <link  href="<?= URL; ?>public/CSS/<?= $no_css ?>" rel="stylesheet"/>
          <?php endforeach; ?>
       <?php endif; ?>
 
       <!-- favicon -->
-      <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
+      <link rel="shortcut icon" type="image/png" href="<?= URL; ?>/img/favicon.png"/>
 
       <!--Police de caractère-->
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
@@ -41,20 +41,23 @@
 
   <body>
 
-
-
       <!-- afficher le header (barre de nav + texte intro)-->
         <?= $header_content; ?>
 
-      <!-- affichage des alertes -->
-        <?php if(!empty($_SESSION['alert'])) : ?>
-          <div class="alert <?= $_SESSION['alert']['type']; ?>" role="alert">
-            <?= $_SESSION['alert']['message'] ?>
-          </div>
-        <?php
-          unset($_SESSION['alert']);
-          endif;
-        ?>
+      <!-- affichage des alertes optimisés-->
+      <div class="container">
+          <?php
+          if(!empty($_SESSION['alert'])) {
+              foreach($_SESSION['alert'] as $alert){
+                  echo "<div class='alert ". $alert['type'] ."' role='alert'> ".$alert['message']."
+              </div>";
+              }
+              unset($_SESSION['alert']);
+          }
+
+          ?>
+      </div>
+
 
       <!-- affichage du contenu ------------------------------>
          <?= $page_content; ?>
@@ -72,6 +75,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+
         <!-- cdn boostrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -86,6 +90,15 @@
     <script>
       AOS.init();
     </script>
+
+    <!--    js optimisé-->
+      <link  href="<?= URL; ?>public/Javascript/accueil.js" rel="stylesheet"/>
+      <?php if(!empty($page_js)) : ?>
+          <?php foreach($page_js as $fichier_js ) : ?>
+              <script src="<?= URL?>public/Javascript/<?= $fichier_js ?>"></script>
+          <?php endforeach; ?>
+      <?php endif; ?>
+    
 
   </body>
 </html>

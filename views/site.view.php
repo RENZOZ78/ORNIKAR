@@ -13,12 +13,15 @@
 
      ?>
 
-     <?php foreach ($produit as $ligne ) : ?>
+    <?= "<h2>Nos prestations</h2>" ;?>
+     <?php foreach ($produits as $ligne ) : ?>
        <br>
        -----------
        <br>
-       Produit 1: <?= $ligne["creation"];?>
+       id produit: <?= $ligne["id"];?>
        <br>
-       Produit 2: <?= $ligne["Business_plan"];?>
+       Désignation: <?= $ligne["designation"];?>
+       <br>
+        Prix: <?= $ligne["prix"];?>
        <br>
      <?php endforeach; ?>

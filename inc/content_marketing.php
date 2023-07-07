@@ -8,8 +8,8 @@
             <div class="col-md-6" data-aos="zoom-in-right" data-aos-duration="1000" >
                 <h2 class="about text-center">A Propos</h2>
                 <hr>
-                <p>Notre agence vous propose plusieurs solutions afin que votre activié prenne de la l'importance qu'elle mérite sur le web.</p>
-                <p>Nous écoutons vos demandes, identifions vos besoins, puis nous réalisons votre site internet.</p>
+                <p>Notre agence vous propose plusieurs solutions afin que votre activité prenne de la l'importance qu'elle mérite sur le web.</p>
+                <p>Nous écoutons vos demandes, identifions vos besoins, puis nous réalisons votre publicité sur internet afin d'atteindre vos objectifs.</p>
             </div>
 
             <div class="col-md-6" data-aos="zoom-in-right" >
@@ -160,88 +160,109 @@
  </section>
 
 <!-- Cartes -->
+
  <section id="prix">
-     <h2 class="text-center offreH">Les tarifs</h2>
+     <h2 class="text-center offreH">Nos offres</h2>
      <hr>
      <div id="cartes" class="container  ">
          <div class="row  ">
 
-              <div class="col-lg-3 carte">
+              <div class="col-lg-4 carte">
                   <div class="threeCards">
                       <div class="header">
-                          <h3 class="carte_prix" >A partir de<span id="spanPrix">  550€</span> </h3>
+                          <h3 class="carte_prix" >A partir de<span id="spanPrix">  350€</span> </h3>
                           <div class="type">
-                              <h2>Création de société</h2>
+                              <h2>Votre site </h2>
                           </div>
                       </div>
-                      <div class="details">Rédaction des statuts</div>
-                      <div class="details">Journal officiel</div>
-                      <div class="details">Constitution du dossier</div>
-                      <div class="details"> Obtention du K-bis</div>
-                      <div id="btn"><a href="#">Commander</a></div>
+                      <div class="details">Site static</div>
+                      <div class="details">Site dynamique</div>
+                      <div class="details">Gestion de site</div>
+                      <div class="details"> Noms de Domaine + hebergement</div>
+                      <div id="btn"><a href="#">S'inscrire</a></div>
                   </div>
               </div>
 
-             <div class="col-lg-3 carte">
-                 <div class="threeCards">
-                     <div class="header">
-                         <h3 class="carte_prix" >A partir de<span id="spanPrix">  50€</span> /mois</h3>
-                         <div class="type">
-                             <h2>Gestion de société</h2>
-                         </div>
-                     </div>
-
-                     <div class="details">Gestion paie</div>
-                     <div class="details">Gestion entrée de nouveau salarié (dpae)</div>
-                     <div class="details">Gestion declaration social (dsn)</div>
-                     <div class="details"> Gestion fin de contrat salarié</div>
-                     <div id="btn"><a href="#">Commander</a></div>
-                 </div>
-             </div>
-
-              <div class="col-lg-3 carte">
+              <div class="col-lg-4 carte">
                   <div class="threeCards">
                       <div class="header">
                           <div class="type">
-                              <h2>Divers modifications</h2>
+                              <h2>Publicité</h2>
+                              <!-- <p class="">Ramener des clients sur votre site</p> -->
                           </div>
                           <h3 class="carte_prix" >A partir de <span id="spanPrix"> 300€</span> /mois</h3>
                           <div>
                               <h2 class="promes" ></h2>
                           </div>
                       </div>
-                      <div class="details">Modification de dénomination</div>
-                      <div class="details">Modification de gérance</div>
-                      <div class="details">Modification d'activité</div>
-                      <div class="details"> Modification des parts d'associés</div>
-                      <div id="btn"><a href="#">Commander</a></div>
+                      <div class="details">Facebook</div>
+                      <div class="details">Instagram</div>
+                      <div class="details">Snapchat</div>
+                      <div class="details">Google</div>
+                      <div id="btn"><a href="#">S'inscrire</a></div>
                   </div>
               </div>
 
-             <div class="col-lg-3 carte">
-                 <div class="threeCards">
-                     <div class="header">
-                         <h3 class="carte_prix" >A partir de<span id="spanPrix">  200€</span> /mois</h3>
-                         <div class="type">
-                             <h2>Fermeture de société</h2>
-                         </div>
-                     </div>
+              <div class="col-lg-4 carte">
+                  <div class="threeCards">
+                      <div class="header">
+                          <h3 class="carte_prix" >A partir de<span id="spanPrix">  200€</span> /mois</h3>
+                          <div class="type">
+                              <h2>E-réputation</h2>
+                          </div>
+                      </div>
 
-                     <div class="details">Modification des status</div>
-                     <div class="details">Journal officiel</div>
-                     <div class="details">Constitution du dossier</div>
-                     <div class="details"> Obtention du nouveau K-bis</div>
-                     <div id="btn"><a href="#">Commander</a></div>
-                 </div>
-             </div>
+                      <div class="details">Création de communauté</div>
+                      <div class="details">Animation de votre communauté</div>
+                      <div class="details">Une communauté facebook & instagram</div>
+                      <div class="details">Gestion de votre E-réputation</div>
+                      <div id="btn"><a href="#">S'inscrire</a></div>
+                  </div>
+              </div>
 
          </div>
      </div>
  </section>
 
+<!-- SECTION PROGRESS BAR -->
 
+ <section id="progress">
+     <div class="container">
+         <div class="row">
+             <div class="col-md-6 competences"  data-aos="fade-right" data-aos-offset="300" >
+                 <h2 class=" competences text-center">Notre savoir-faire</h2>
+                 <hr>
+                 <p>
+                     Nous vous assurons une prestation de qualités afin que votre activité et que votre réputation augmente très rapidement sur internet.
+                 </p>
+               </div>
+
+          <div class="col-md-6 pt-1"  data-aos="fade-up"
+   data-aos-anchor-placement="center-bottom" >
+              <p class="m-0">Marketing Digital</p>
+              <div class="progress">
+                  <div class="progress-bar progress-bar-animated  progress-bar-striped "  role="progressbar" style="width: 90%" ></div>
+              </div>
+              <p class="m-0">Growth Hacking</p>
+              <div class="progress">
+                  <div class="progress-bar progress-bar-animated  progress-bar-striped bg-success role="progressbar" style="width: 95%" ></div>
+              </div>
+              <p class="m-0">Communication</p>
+              <div class="progress">
+                  <div class="progress-bar progress-bar-animated  progress-bar-striped bg-info "  role="progressbar" style="width: 90%" ></div>
+              </div>
+              <p class="m-0">Réseaux</p>
+              <div class="progress">
+                  <div class="progress-bar progress-bar-animated  progress-bar-striped bg-warning "  role="progressbar" style="width: 90%" ></div>
+              </div>
+          </div>
+
+         </div>
+     </div>
+ </section>
 
 <!-- SECTION CLIENTS -->
+
  <section id="clients">
      <div class="container">
          <div class="row" data-aos="zoom-in-up"  >
@@ -287,7 +308,7 @@
           <div class="row">
               <div class="col-lg-12" data-aos="fade-right"  data-aos-offset="500"   data-aos-easing="ease-in-sine" >
                   <h3>Contactez-nous</h3>
-                  <p class="lead">N' hésitez pas à nous appeler, nous sommes joignable via nos différents cannaux 24/7j et par téléphone au 07 62 63 44 70.</p> <br>
+                  <p class="lead">N' hésitez pas à nous appeler, nous sommes joignable via nos différents canaux 24/7j et par téléphone au 07 62 63 44 70.</p> <br>
                   <form action="">
                       <div class="input-group input-group-lg mb-3">
                           <div class="input-group-prepend">

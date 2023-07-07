@@ -47,6 +47,70 @@
 
                 </div>
 
+                <!-- SECTION TARIF -->
+                <section id="prix">
+                    <h2 class="text-center offreH">Tarifs</h2>
+                    <hr>
+                    <div id="cartes" class="container  ">
+                        <div class="row  ">
+
+                            <div class="col-lg-4 carte">
+                                <div class="threeCards">
+                                    <div class="header">
+                                        <h3 class="carte_prix" >A partir de<span id="spanPrix">  250€</span> </h3>
+                                        <div class="type">
+                                            <h2>Site vitrine </h2>
+                                        </div>
+                                    </div>
+                                    <div class="details">Site responsive</div>
+                                    <div class="details">Site référencé seo</div>
+                                    <div class="details">Nom de Domaine</div>
+                                    <div class="details">Hebergement</div>
+                                    <div id="btn"><a href="#">Commander</a></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 carte">
+                                <div class="threeCards">
+                                    <div class="header">
+                                        <div class="type">
+                                            <h2>Blog</h2>
+                                            <!-- <p class="">Ramener des clients sur votre site</p> -->
+                                        </div>
+                                        <h3 class="carte_prix" >A partir de <span id="spanPrix"> 400€</span> </h3>
+                                        <div>
+                                            <h2 class="promes" ></h2>
+                                        </div>
+                                    </div>
+                                    <div class="details">Site responsive</div>
+                                    <div class="details">Site référencé seo</div>
+                                    <div class="details">Section membre</div>
+                                    <div class="details">Des articles optimisé seo</div>
+                                    <div id="btn"><a href="#">Commander</a></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 carte">
+                                <div class="threeCards">
+                                    <div class="header">
+                                        <h3 class="carte_prix" >A partir de<span id="spanPrix">  700€</span> </h3>
+                                        <div class="type">
+                                            <h2>Site e-commerce</h2>
+                                        </div>
+                                    </div>
+
+                                    <div class="details">Site responsive</div>
+                                    <div class="details">Site référencé</div>
+                                    <div class="details">Page articles et prestations</div>
+                                    <div class="details">paiement sécurisé</div>
+                                    <div id="btn"><a href="#">Commander</a></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
             </div>
 
         </section>

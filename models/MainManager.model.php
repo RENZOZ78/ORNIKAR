@@ -11,7 +11,6 @@
         $produit = $req->fetchAll(PDO::FETCH_ASSOC);
         $req->closeCursor();
         return $produit;
-
     }
   }
  ?>

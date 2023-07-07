@@ -159,10 +159,9 @@
      </div>
  </section>
 
-<!-- Cartes -->
-
+<!-- SECTION TARIF -->
  <section id="prix">
-     <h2 class="text-center offreH">Nos offres</h2>
+     <h2 class="text-center offreH">Nos Tarifs</h2>
      <hr>
      <div id="cartes" class="container  ">
          <div class="row  ">
@@ -225,15 +224,14 @@
  </section>
 
 <!-- SECTION PROGRESS BAR -->
-
  <section id="progress">
      <div class="container">
          <div class="row">
              <div class="col-md-6 competences"  data-aos="fade-right" data-aos-offset="300" >
-                 <h2 class=" competences text-center">Notre savoir-faire</h2>
+                 <h2 class=" competences text-center">Notre champs d'action</h2>
                  <hr>
                  <p>
-                     Nous vous assurons une prestation de qualités afin que votre activité et que votre réputation augmente très rapidement sur internet.
+                     Nous vous assurons des prestations de qualités afin que votre activité soit pérenne.
                  </p>
                </div>
 

@@ -12,7 +12,8 @@
         //test routage
         if(empty($_GET['page'])){
            echo "page d'accueil";
-           header("location:accueil");
+           //header("location:accueil");
+            $page= "accueils";
 
         } else{
            echo "autres pages";
@@ -25,12 +26,18 @@
           case "accueils": $mainController->accueil();
           break;
           case "entreprises": $mainController->entreprise();
+            switch ($page){
+                case "creation": $mainController->creation_entreprise();
+            }
           break;
+            
           case "sites": $mainController->site();
           break;
           case "reseaux": $mainController->reseaux();
           break;
           case "contact":  $mainController->contact();
+          break;
+          case "marketing":  $mainController->marketing();
           break;
           default: throw new exception( "la page n'existe pas du tout");
         }

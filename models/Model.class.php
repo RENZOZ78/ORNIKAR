@@ -4,8 +4,9 @@
     private static $pdo;
 
     private static function setBdd(){
-      self::$pdo = new PDO("mysql:host=127.0.0.1, dbname=Webycloudy;charset=utf8", "root", "");
-      self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+      self::$pdo = new PDO("mysql:host=127.0.0.1;dbname=webycloudy;charset=utf8", "root", "");
+      
+      self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
     protected function getBdd(){
@@ -14,7 +15,7 @@
         echo "vous etes connecté";
       }
       return self::$pdo;
-      echo "vous etes connecté";
+      echo "vous n'etes pas connecté, mais ca passe!";
     }
   }
 

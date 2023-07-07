@@ -6,6 +6,6 @@
   //$page_title= "WebySites | Contact";
   //$H1= "Contact";
   $header_content=  include "inc/header.php";
-  $page_content=  include "inc/content_projets.php";
+  $page_content=  include "inc/content_contact.php";
 
  ?>
