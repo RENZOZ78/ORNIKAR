@@ -5,8 +5,9 @@
 
     define("URL", str_replace("index.php","",(isset($_SERVER['HTTPS'])? "https" : "http").  "://".$_SERVER['HTTP_HOST'].$_SERVER["PHP_SELF"]));
 
-      require_once("./controllers/MainController.controller.php");
-      $mainController = new MainController();
+      require_once("./controllers/Visiteur/Visiteur.controller.php");
+      $visiteurController = new VisiteurController();
+
 
       try {
         //test routage
@@ -23,30 +24,37 @@
 
         //routage vers les différentes page_description
         switch($page){
-          case "accueils": $mainController->accueil();
+          case "accueils": $visiteurController->accueil();
           break;
-          case "entreprises": $mainController->entreprise();
-            switch ($page){
-                case "creation": $mainController->creation_entreprise();
+          case "entreprises": $visiteurController->entreprise();
+            switch ($url[1]){
+                case "creation": $visiteurController->creation_entreprise();
+                break;
+            }
+            switch ($url[2]){
+                case "modification": $visiteurController->modification_entreprise();
+                break;
+            }
+            switch ($url[3]){
+                case "gestion": $visiteurController->gestion_entreprise();
+                break;
             }
           break;
-            
-          case "sites": $mainController->site();
+
+          case "sites": $visiteurController->site();
           break;
-          case "reseaux": $mainController->reseaux();
+          case "reseaux": $visiteurController->reseaux();
           break;
-          case "contact":  $mainController->contact();
+          case "contact":  $visiteurController->contact();
           break;
-          case "marketing":  $mainController->marketing();
+          case "marketing":  $visiteurController->marketing();
           break;
           default: throw new exception( "la page n'existe pas du tout");
         }
 
       } catch (\Exception $e) {
-        $mainController->pageErreur($e->getMessage());
+        $visiteurController->pageErreur($e->getMessage());
       }
-
-
 
 
 
