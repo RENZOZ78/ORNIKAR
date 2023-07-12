@@ -1,23 +1,34 @@
 <?php
   require_once("./controllers/MainController.controller.php");
   require_once("models/MainManager.model.php");
+  require_once("models/Visiteur/Visiteur.model.php");
 
   class VisiteurController extends MainController{
 
+    private $visiteurManager;
+
     //constructeur pour creer une instance de MainManager
     public function __construct(){
-      $this->mainManager = new MainManager();
+      $this->visiteurManager = new VisiteurManager();
     }
 
     //ft qui gere les infos de la page d'accueils--------
     public  function accueil(){
+      //echo password_hash("test", PASSWORD_DEFAULT);
+
       //Afficher les alertes
       Toolbox::ajouterMessageAlerte("test", Toolbox::COULEUR_VERTE);
       Toolbox::ajouterMessageAlerte("Toutes les reponses a vos questions se trouvent ici", Toolbox::COULEUR_ROUGE);
       Toolbox::ajouterMessageAlerte("Great", Toolbox::COULEUR_ORANGE);
 
+      //recuperer les donnés getUtilisateurs
+      $utilisateurs = $this->visiteurManager->getUtilisateurs();
+      print_r($utilisateurs);
+      printf($utilisateurs);
+
       //recuperation des données de la variables data de l'instance mainManager
-        $produits = $this->mainManager->getProduits();
+        $produits = $this->visiteurManager->getProduits();
+        print_r($produits);
 
       //tableaux qui regroupent les variable et ses valeurs
       $data_page = [
