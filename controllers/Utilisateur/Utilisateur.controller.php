@@ -1,15 +1,16 @@
 <?php
   require_once("./controllers/MainController.controller.php");
   require_once("models/MainManager.model.php");
-  require_once("models/Visiteur/Visiteur.model.php");
+  require_once("models/Utilisateur/Utilisateur.model.php");
 
-  class VisiteurController extends MainController{
 
-    private $visiteurManager;
+  class UtilisateurController extends MainController{
+
+    private $utilisateurManager;
 
     //constructeur pour creer une instance de MainManager
     public function __construct(){
-      $this->visiteurManager = new VisiteurManager();
+      $this->utilisateurManager = new UtilisateurManager();
     }
 
     //ft qui gere les infos de la page d'accueils--------
@@ -21,7 +22,7 @@
       Toolbox::ajouterMessageAlerte("Toutes les reponses a vos questions se trouvent ici", Toolbox::COULEUR_ROUGE);
       Toolbox::ajouterMessageAlerte("Great", Toolbox::COULEUR_ORANGE);
 
-      //recuperer les donnés getUtilisateurs
+      //recuperer les données getUtilisateurs
       $utilisateurs = $this->visiteurManager->getUtilisateurs();
       print_r($utilisateurs);
       printf($utilisateurs);
@@ -42,6 +43,24 @@
         "template" => "views/common/template.php"
       ];
       $this->genererPage($data_page);
+    }
+
+    //ft qui verifie si les data login sont valides + validaiton mail
+    public function validation_login($login, $password){
+      if($this->utilisateurManager->isCombinaisonValide($login, $password)){
+          if($this->utilisateurManager->estCompteActive($login)){
+            Toolbox::ajouterMessageAlerte("Bon retour sur le site ".$login. "!", Toolbox:: COULEUR_VERTE);
+            $_SESSION['profil'] = ["login" => $login];
+              header("location: ".URL."compte/profil");
+          }else{
+            Toolbox::ajouterMessageAlerte("Le compte ".$login. " n'a pas été activé", Toolbox::COULEUR_ROUGE);
+            //renvoyer le mail da validation a l'utilisateur
+            header("location: ".URL."login");
+          }
+      }else {
+        Toolbox::ajouterMessageAlerte("la combinaison mot de passe et login non valide", Toolbox::COULEUR_ROUGE);
+        header("location: ".URL. "login");
+      }
     }
 
     //ft page entreprise-----------------

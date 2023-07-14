@@ -39,6 +39,11 @@
                          <li class="nav-item mr-1">
                              <a href="<?= URL; ?>contact" class="nav-link">Contact</a>
                          </li>
+
+                         <li class="nav-item mr-1">
+                             <a href="<?= URL; ?>login" class="nav-link">Se connecter</a>
+                         </li>
+
                      </ul>
                  </div>
              </div>

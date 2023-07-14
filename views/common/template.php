@@ -45,7 +45,7 @@
         <?= $header_content; ?>
 
       <!-- affichage des alertes optimisés-->
-      <div class="container">
+      <div class="container mt-sm-5" >
           <?php
           if(!empty($_SESSION['alert'])) {
               foreach($_SESSION['alert'] as $alert){
@@ -98,7 +98,7 @@
               <script src="<?= URL?>public/Javascript/<?= $fichier_js ?>"></script>
           <?php endforeach; ?>
       <?php endif; ?>
-    
+
 
   </body>
 </html>
