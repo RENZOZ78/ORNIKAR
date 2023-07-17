@@ -29,8 +29,8 @@
       $resultat = $stmt->fetch(PDO::FETCH_ASSOC);
       $stmt->closeCursor();
       return ((int)$resultat['is_valid'] ===0) ? false : true;
-
     }
+  
     //ft utilisateurManager
     public function getUserInformation($login){
       //test return false;
@@ -41,13 +41,9 @@
       $resultat = $stmt->fetch(PDO::FETCH_ASSOC);
       $stmt->closeCursor();
       return $resultat;
-
     }
 
-
-
-
-    }
+  }
 
 
 
