@@ -49,7 +49,10 @@
                        <li class="nav-item mr-1">
                            <a href="<?= URL; ?>compte/profil" class="nav-link">Profil</a>
                        </li>
-                     <?php endif; ?>
+                       <li class="nav-item mr-1">
+                           <a href="<?= URL; ?>compte/deconnexion" class="nav-link">Se deconnecter</a>
+                       </li>
+                        <?php endif; ?>
 
                      </ul>
                  </div>

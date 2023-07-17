@@ -70,6 +70,8 @@
             switch($url[1]){
               case "profil" : $utilisateurController->profil();
               break;
+              case "deconnexion" : $utilisateurController->deconnexion();
+              break;
               default: throw new exception( "la page n'existe pas");
             }
           break;

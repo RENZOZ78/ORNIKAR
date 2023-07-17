@@ -223,6 +223,14 @@
       $this->genererPage($data_page);
   }
 
+  //ft page decoonexion----------------
+  public function deconnexion(){
+
+    Toolbox::ajouterMessageAlerte("Vous êtes maintenant déconnecté", Toolbox::COULEUR_ORANGE);
+    unset($_SESSION['profil']);
+    header ("location: " .URL."accueils");
+  }
+
     //ft page erreur qui appelle la ft du parent-------
     //on ne veut pas de page erreur specifique aux visiteur => on laisse la ft principale dans le controlller
     public function pageErreur($msg){
