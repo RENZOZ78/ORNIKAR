@@ -20,17 +20,30 @@
       return password_verify($password, $passwordBD);
       }
 
-      public function estCompteActive($login){
-        //test return false;
-        $req = "SELECT is_valid FROM utilisateur where login = :login";
-        $stmt = $this->getBdd()->prepare($req);
-        $stmt->bindValue(":login",$login,PDO::PARAM_STR);
-        $stmt->execute();
-        $resultat = $stmt->fetch(PDO::FETCH_ASSOC);
-        $stmt->closeCursor();
-        return ((int)$resultat['is_valid'] ===0) ? false : true;
+    public function estCompteActive($login){
+      //test return false;
+      $req = "SELECT is_valid FROM utilisateur where login = :login";
+      $stmt = $this->getBdd()->prepare($req);
+      $stmt->bindValue(":login",$login,PDO::PARAM_STR);
+      $stmt->execute();
+      $resultat = $stmt->fetch(PDO::FETCH_ASSOC);
+      $stmt->closeCursor();
+      return ((int)$resultat['is_valid'] ===0) ? false : true;
 
-      }
+    }
+    //ft utilisateurManager
+    public function getUserInformation($login){
+      //test return false;
+      $req = "SELECT * FROM utilisateur where login = :login";
+      $stmt = $this->getBdd()->prepare($req);
+      $stmt->bindValue(":login",$login,PDO::PARAM_STR);
+      $stmt->execute();
+      $resultat = $stmt->fetch(PDO::FETCH_ASSOC);
+      $stmt->closeCursor();
+      return $resultat;
+
+    }
+
 
 
 

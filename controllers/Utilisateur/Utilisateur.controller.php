@@ -201,6 +201,28 @@
       $this->genererPage($data_page);
   }
 
+  //ft page profil----------------
+  public function profil(){
+
+    //recuperation des données de la variables $data a partir de la clas utilisateurManager , dans la session de la ft getUserInformation en prennant en parametre profil et un login
+    $datas = $this->utilisateurManager->getUserInformation($_SESSION['profil']['login']);
+    $_SESSION['profil']['role'] = $datas['role'];
+
+    //print_r($datas);
+
+    //      envoyer data a page contact view
+      $data_page = [
+        "view" => "views/Utilisateur/profil.view.php",
+        "custom_css" => ["projets.css"],
+        "H1" => "Votre compte",
+        "uvp"=> "Vous trouverez toutes vos informations",
+        "utilisateur" => $datas,
+        "page_title"=> "WebyCloudy | Profil ",
+        "template" => "views/common/template.php"
+      ];
+      $this->genererPage($data_page);
+  }
+
     //ft page erreur qui appelle la ft du parent-------
     //on ne veut pas de page erreur specifique aux visiteur => on laisse la ft principale dans le controlller
     public function pageErreur($msg){

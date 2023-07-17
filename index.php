@@ -66,6 +66,13 @@
               header('location: '.URL."login");
             }
           break;
+          case "compte" :
+            switch($url[1]){
+              case "profil" : $utilisateurController->profil();
+              break;
+              default: throw new exception( "la page n'existe pas");
+            }
+          break;
           default: throw new exception( "la page n'existe pas du tout");
         }
 
