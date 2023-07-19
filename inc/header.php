@@ -45,6 +45,9 @@
                          <li class="nav-item mr-1">
                              <a href="<?= URL; ?>login" class="nav-link">Se connecter</a>
                          </li>
+                         <li class="nav-item mr-1">
+                             <a href="<?= URL; ?>creerCompte" class="nav-link">Créer compte</a>
+                         </li>
                        <?php else : ?>
                        <li class="nav-item mr-1">
                            <a href="<?= URL; ?>compte/profil" class="nav-link">Profil</a>

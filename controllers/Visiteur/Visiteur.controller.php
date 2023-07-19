@@ -165,22 +165,36 @@
   //ft page login----------------
   public function login(){
     //recuperation des données de la variables produit de l'instance mainManager a partir de bdd
-    $produits = $this->visiteurManager->getProduits();
-    $utilisateurs = $this->visiteurManager->getUtilisateurs();
+    //$produits = $this->visiteurManager->getProduits();
+    //$utilisateurs = $this->visiteurManager->getUtilisateurs();
 
     //      envoyer data a page contact view
       $data_page = [
         "view" => "./views/Visiteur/login.view.php",
         "custom_css" => ["projets.css"],
-        "H1" => "Se connecter",
+        "H1" => "Creation de compte",
         "uvp"=> "Veuillez entrer vos logins et mot de passe",
-        "produits" => $produits,
-        "utilisateurs" => $utilisateurs,
+        //"produits" => $produits,
+        //"utilisateurs" => $utilisateurs,
         "page_title"=> "WebyCloudy | Login ",
         "template" => "views/common/template.php"
       ];
       $this->genererPage($data_page);
   }
+
+    //ft qui genere les infos a la vue creerCompte.view
+    public function creerCompte(){
+      $data_page = [
+        "view" => "./views/Visiteur/creerCompte.view.php",
+        "custom_css" => ["creerCompte.css"],
+        "H1" => "Créer votre compte",
+        "uvp"=> "Afin d'avoir accès à outes les infos, veuillez créer votre compte",
+        "page_title"=> "WebyCloudy | Créer compte ",
+        "template" => "views/common/template.php"
+      ];
+      $this->genererPage($data_page);
+
+    }
 
     //ft page erreur qui appelle la ft du parent-------
     //on ne veut pas de page erreur specifique aux visiteur => on laisse la ft principale dans le controlller
