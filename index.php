@@ -68,7 +68,17 @@
           break;
           case "creerCompte": $visiteurController->creerCompte();
           break;
-          case "validation_creerCompte": echo "test";
+          case "validation_creerCompte":
+            if (!empty($_POST['login']) && !empty($_POST['password']) && !empty($_POST['mail'])){
+                echo "les champs sont remplis";
+              $login = Securite::secureHTML($_POST['login']);
+              $password = Securite::secureHTML($_POST['password']);
+              $mail = Securite::secureHTML($_POST['mail']);
+              $utilisateurController->validation_creerCompte($login,$password,$mail);
+            }else{
+              Toolbox::ajouterMessageAlerte("Les 3 informations sont obligatoires !", Toolbox::COULEUR_ROUGE);
+              header("location:".URL."creerCompte");
+            }
           break;
           case "compte" :
             if(!Securite::estConnecte()){

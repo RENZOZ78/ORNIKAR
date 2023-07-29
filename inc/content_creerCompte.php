@@ -21,7 +21,7 @@
     </div>
 
     <div class="col-md-4">
-      <label for="inputPassword5" class="form-label">Mot de passe</label>
+      <label for="password" class="form-label">Mot de passe</label>
       <input type="password" id="password" name="password" class="form-control" aria-labelledby="passwordHelpBlock" required>
       <div id="passwordHelpBlock" class="form-text">
         Votre mot de passe doit avoir 8 caractères, contenir des lettre et de chiffres, ne doit pas contenir d'espace, de caracteres spéciaux, ou emoji.

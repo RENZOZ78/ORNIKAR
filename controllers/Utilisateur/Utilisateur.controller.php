@@ -231,6 +231,25 @@
     header ("location: " .URL."accueils");
   }
 
+  //ft qui valide un compte , en verifiant que le login n'existe pass
+    public function validation_creerCompte($login,$password,$mail){
+      if ($this->utilisateurManager->verifLoginDisponible($login)){
+
+        $passwordCrypte = password_hash($password,PASSWORD_DEFAULT);
+        $clef = rand(0,9999);
+        echo "password et clef crée";
+        if($this->utilisateurManager->bdCreerCompte($login,$passwordCrypte,$mail,$clef)){
+          Toolbox::ajouterMessageAlerte("La compte a été crée, un mail de validation vous sera envoyé", Toolbox::COULEUR_VERTE);
+          header("Location: ".URL. "login");
+          echo "le compte est crée";
+        }
+      }else{
+        Toolbox::ajouterMessageAlerte("Le login est déjà utilisé !", Toolbox::COULEUR_ROUGE);
+        header("Location: ".URL."creerCompte");
+        echo "le compte n'est pas crée";
+      }
+    }
+
     //ft page erreur qui appelle la ft du parent-------
     //on ne veut pas de page erreur specifique aux visiteur => on laisse la ft principale dans le controlller
     public function pageErreur($msg){
