@@ -29,7 +29,7 @@
 
       //recuperation des données de la variables data de l'instance mainManager
         $produits = $this->visiteurManager->getProduits();
-        print_r($produits);
+        //print_r($produits);
 
       //tableaux qui regroupent les variable et ses valeurs
       $data_page = [
@@ -53,9 +53,11 @@
             $_SESSION['profil'] = ["login" => $login];
               header("location: ".URL."compte/profil");
           }else{
-            Toolbox::ajouterMessageAlerte("Le compte ".$login. " n'a pas été activé", Toolbox::COULEUR_ROUGE);
+            $msg =  "Le compte de ".$login. " n'a pas été activé par mail. ";
+            $msg .= "<a href='renvoyerMailValidation/".$login."'>Renvoyez le mail de validation </a>";
+            Toolbox::ajouterMessageAlerte($msg, Toolbox::COULEUR_ROUGE);
             //renvoyer le mail da validation a l'utilisateur
-            header("location: ".URL."login");
+            header("Location: ".URL."login");
           }
       }else {
         Toolbox::ajouterMessageAlerte("la combinaison mot de passe et login non valide", Toolbox::COULEUR_ROUGE);
@@ -204,7 +206,7 @@
   //ft page profil----------------
   public function profil(){
 
-    //recuperation des données de la variables $data a partir de la clas utilisateurManager , dans la session de la ft getUserInformation en prennant en parametre profil et un login
+    //recuperation des données de la variables $data a partir de la classe utilisateurManager , dans la session de la ft getUserInformation en prennant en parametre profil et un login
     $datas = $this->utilisateurManager->getUserInformation($_SESSION['profil']['login']);
     $_SESSION['profil']['role'] = $datas['role'];
 
@@ -237,8 +239,9 @@
 
         $passwordCrypte = password_hash($password,PASSWORD_DEFAULT);
         $clef = rand(0,9999);
-        echo "password et clef crée";
         if($this->utilisateurManager->bdCreerCompte($login,$passwordCrypte,$mail,$clef)){
+          $this->sendMailValidation($login, $mail, $clef);
+          echo "instance avec ". $login,$mail,$clef. "crée!!";
           Toolbox::ajouterMessageAlerte("La compte a été crée, un mail de validation vous sera envoyé", Toolbox::COULEUR_VERTE);
           header("Location: ".URL. "login");
           echo "le compte est crée";
@@ -249,6 +252,21 @@
         echo "le compte n'est pas crée";
       }
     }
+
+    //ft  qui valide l'envoie de mailde  validation_login
+    private function sendMailValidation($login,$mail,$clef){
+      $urlVerification = URL."validationMail/".$login."/".$clef;
+      $sujet = "Creation du compte sur le site webycloudy";
+      $message = "Pour valider votre compte veuillez cliquer sur le lien suivant".$urlVerification;
+      Toolbox::sendMail($mail,$sujet,$message);
+    }
+
+    public function renvoyerMailValidation($login){
+      $utilisateur = $this->utilisateurManager->getUserInformation($login);
+      $this->sendMailValidation($login,$utilisateur['mail'],$utilisateur['clef']);
+      header ("Location: ".URL."login");
+    }
+
 
     //ft page erreur qui appelle la ft du parent-------
     //on ne veut pas de page erreur specifique aux visiteur => on laisse la ft principale dans le controlller
