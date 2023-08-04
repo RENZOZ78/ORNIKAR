@@ -299,7 +299,7 @@
           "view" => "./views/Utilisateur/modificationPassword.view.php",
           "custom_css" => ["style.css", "accueil.css"],
           "H1" => "Modifier votre mot  ".$_SESSION['profil']['login'],
-
+          "page_js" => ["modificationPassword.js"],
           "uvp"=> "",
           "page_title"=> "WebyCloudy | Modification Mot de pass ",
           "template" => "views/common/template.php"

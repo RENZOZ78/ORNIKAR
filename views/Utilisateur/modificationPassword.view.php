@@ -18,8 +18,8 @@
 <form method="post" action="<?=URL ?>compte/validation_modificationPassword" class="row g-3 needs-validation mt-3 mb-5 d-flex justify-content-evenly" novalidate>
 
     <div class="col-md-3">
-      <label for="passord" class="form-label">Ancien password</label>
-      <input type="password" id="password" name="password" class="form-control" aria-labelledby="passwordHelpBlock" required>
+      <label for="password" class="form-label">Ancien password</label>
+      <input type="password" id="ancienPassword" name="ancienPassword" class="form-control" aria-labelledby="passwordHelpBlock" required>
       <div id="passwordHelpBlock" class="form-text">
         Tapez votre ancien mot de passe
       </div>
@@ -34,14 +34,18 @@
     </div>
 
     <div class="col-md-3">
-      <label for="ConfirmNouveauPassword" class="form-label">Confirmation nouveau mot de passe</label>
-      <input type="password" id="ConfirmNouveauPassword" name="ConfirmNouveauPassword" class="form-control" aria-labelledby="passwordHelpBlock" required>
+      <label for="confirmNouveauPassword" class="form-label">Confirmation nouveau mot de passe</label>
+      <input type="password" id="confirmNouveauPassword" name="confirmNouveauPassword" class="form-control" aria-labelledby="passwordHelpBlock" required>
       <div id="passwordHelpBlock" class="form-text">
         Confirmer votre nouveau mot de passe.
       </div>
     </div>
 
+    <div class="alert alert-danger d-none" id="erreur">
+      Les passwords ne correspondent pas
+    </div>
+
     <div class="col-12">
-      <button class="btn btn-primary" type="submit">Valider</button>
+      <button class="btn btn-primary" id="btnValidation" type="submit" disabled >Valider</button>
     </div>
 </form>
