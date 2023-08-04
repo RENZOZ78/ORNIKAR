@@ -267,6 +267,20 @@
       header ("Location: ".URL."login");
     }
 
+    //ft qui active le compte utilisateur=basculer le champs isValid a 1
+    public function validation_mailCompte($login,$clef){
+      if($this->utilisateurManager->bdValidationMailCompte($login,$clef)){
+        Toolbox::ajouterMessageAlerte("Votre compte est bien activéé !", Toolbox::COULEUR_VERTE);
+        $_SESSION['profil'] = [
+          "login" => $login,
+        ];
+        header("Location: ".URL.'compte/profil');
+      }else{
+        Toolbox::ajouterMessageAlerte("Le compte n'a pas été activée!", Toolbox::COULEUR_ROUGE);
+        header ("Location :".URL."creerCompte");
+      }
+    }
+
 
     //ft page erreur qui appelle la ft du parent-------
     //on ne veut pas de page erreur specifique aux visiteur => on laisse la ft principale dans le controlller

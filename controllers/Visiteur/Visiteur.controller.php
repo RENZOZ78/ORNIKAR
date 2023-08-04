@@ -23,8 +23,8 @@
 
       //recuperer les donnés getUtilisateurs
       $utilisateurs = $this->visiteurManager->getUtilisateurs();
-      print_r($utilisateurs);
-      printf($utilisateurs);
+      //print_r($utilisateurs);
+      //printf($utilisateurs);
 
       //recuperation des données de la variables data de l'instance mainManager
         $produits = $this->visiteurManager->getProduits();

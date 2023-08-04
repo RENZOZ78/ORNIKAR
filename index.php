@@ -82,7 +82,7 @@
           break;
           case "renvoyerMailValidation" : $utilisateurController->renvoyerMailValidation($url[1]);
           break;
-          case "validationMail": echo "test validation mail";
+          case "validationMail": $utilisateurController->validation_mailCompte($url[1],$url[2]);
           break;
           case "compte" :
             if(!Securite::estConnecte()){
