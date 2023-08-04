@@ -292,6 +292,22 @@
         header ("Location: ".URL."compte/profil");
     }
 
+    public function modificationPassword(){
+
+        // Envoyer les données dans la view
+        $data_page = [
+          "view" => "./views/Utilisateur/modificationPassword.view.php",
+          "custom_css" => ["style.css", "accueil.css"],
+          "H1" => "Modifier votre mot  ".$_SESSION['profil']['login'],
+
+          "uvp"=> "",
+          "page_title"=> "WebyCloudy | Modification Mot de pass ",
+          "template" => "views/common/template.php"
+        ];
+        $this->genererPage($data_page);
+      }
+
+
 
     //ft page erreur qui appelle la ft du parent-------
     //on ne veut pas de page erreur specifique aux visiteur => on laisse la ft principale dans le controlller

@@ -88,8 +88,9 @@
       $estModifier = ($stmt->rowCount() > 0);
       $stmt->closeCursor();
       return $estModifier;
-
     }
+
+    
 
   }
 

@@ -38,7 +38,9 @@
               </form>
             </div>
 
-
+            <div class="">
+              <a href="<?= URL ?>compte/modificationPassword" class="btn btn-warning"> Changer le mot de passe</a>
+            </div>
 
           </div>
       </div>
