@@ -94,6 +94,8 @@
                 break;
                 case "deconnexion" : $utilisateurController->deconnexion();
                 break;
+                case "validation_modificationMail" : $utilisateurController->validation_modificationMail(Securite::secureHTML($_POST['mail']));
+                break;
                 default: throw new exception( "la page n'existe pas");
               }
             }

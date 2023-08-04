@@ -216,7 +216,7 @@
       $data_page = [
         "view" => "views/Utilisateur/profil.view.php",
         "custom_css" => ["projets.css"],
-        "H1" => "Votre compte",
+        "H1" => "Compte de ".$_SESSION['profil']['login'],
         "uvp"=> "Vous trouverez toutes vos informations",
         "utilisateur" => $datas,
         "page_js" => ['profil.js'],
@@ -280,6 +280,16 @@
         Toolbox::ajouterMessageAlerte("Le compte n'a pas été activée!", Toolbox::COULEUR_ROUGE);
         header ("Location :".URL."creerCompte");
       }
+    }
+
+    public function validation_modificationMail($mail){
+      echo "entree";
+      if($this->utilisateurManager->bdValidationModificationMail($_SESSION['profil']['login'],$mail)){
+        Toolbox::ajouterMessageAlerte("Le mail est bien modifié !", Toolbox::COULEUR_VERTE);
+      }else{
+        Toolbox::ajouterMessageAlerte("Aucune modification de mail effectuée !", Toolbox::COULEUR_ROUGE);
+      }
+        header ("Location: ".URL."compte/profil");
     }
 
 

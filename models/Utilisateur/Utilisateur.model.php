@@ -66,11 +66,24 @@
 
     }
 
+    //ft qui modifie la valeur de la colonne isValid en bdd de 0 a 1, pour activer le compte utilisateur apres clic du lien mail
     public function bdValidationMailCompte($login,$clef){
       $req = "UPDATE utilisateur set is_valid = 1 WHERE login = :login and clef = :clef";
       $stmt = $this->getBdd()->prepare($req);
       $stmt->bindValue(":login",$login,PDO::PARAM_STR);
       $stmt->bindValue(":clef",$clef,PDO::PARAM_INT);
+      $stmt->execute();
+      $estModifier = ($stmt->rowCount() > 0);
+      $stmt->closeCursor();
+      return $estModifier;
+
+    }
+    // fffft qui valide la modif du mdp en bdd
+    public function bdValidationModificationMail($login,$mail){
+      $req= "UPDATE utilisateur set mail = :mail WHERE login = :login";
+      $stmt = $this->getBdd()->prepare($req);
+      $stmt->bindValue(":login",$login,PDO::PARAM_STR);
+      $stmt->bindValue(":mail",$mail,PDO::PARAM_STR);
       $stmt->execute();
       $estModifier = ($stmt->rowCount() > 0);
       $stmt->closeCursor();
