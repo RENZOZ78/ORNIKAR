@@ -219,6 +219,7 @@
         "H1" => "Votre compte",
         "uvp"=> "Vous trouverez toutes vos informations",
         "utilisateur" => $datas,
+        "page_js" => ['profil.js'],
         "page_title"=> "WebyCloudy | Profil ",
         "template" => "views/common/template.php"
       ];
