@@ -102,6 +102,17 @@
       return $estModifier;
     }
 
+    //function qui supprime le compte en bdModificationPassword
+    public function bdSuppressionCompte($login){
+    $req= "DELETE  FROM utilisateur  WHERE login = :login";
+    $stmt = $this->getBdd()->prepare($req);
+    $stmt->bindValue(":login",$login,PDO::PARAM_STR);  
+    $stmt->execute();
+    $estModifier = ($stmt->rowCount() > 0);
+    $stmt->closeCursor();
+    return $estModifier;
+  }
+
 
   }
 

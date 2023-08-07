@@ -109,11 +109,11 @@
                   header('Location: '.URL. 'compte/modificationPassword');
                 }
                 break;
-
+                case "suppressionCompte": $utilisateurController->validation_suppressionCompte();
+                break;
                 default: throw new exception( "la page n'existe pas");
               }
             }
-
           break;
           default: throw new exception( "la page n'existe pas du tout");
         }

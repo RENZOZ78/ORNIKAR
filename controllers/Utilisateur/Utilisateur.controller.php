@@ -332,6 +332,15 @@
       }
     }
 
+    public function validation_suppressionCompte(){
+    if($this->utilisateurManager->bdSuppressionCompte($_SESSION['profil']['login'])){
+      Toolbox::ajouterMessageAlerte('La suppression du compte est effectué!', Toolbox::COULEUR_VERTE);
+    $this->deconnexion();
+  }else{
+    Toolbox::ajouterMessageAlerte("La suppression du compte n'a pas été effectuée, contacté l'utilisateur", Toolbox::COULEUR_ROUGE);
+    header ("location: ".URL."compte/profil");
+  }
+    }
 
 
 
