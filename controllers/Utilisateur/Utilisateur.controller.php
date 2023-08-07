@@ -4,6 +4,8 @@
   require_once("models/Utilisateur/Utilisateur.model.php");
 
 
+
+
   class UtilisateurController extends MainController{
 
     private $utilisateurManager;
@@ -205,11 +207,9 @@
 
   //ft page profil----------------
   public function profil(){
-
     //recuperation des données de la variables $data a partir de la classe utilisateurManager , dans la session de la ft getUserInformation en prennant en parametre profil et un login
     $datas = $this->utilisateurManager->getUserInformation($_SESSION['profil']['login']);
     $_SESSION['profil']['role'] = $datas['role'];
-
     //print_r($datas);
 
     //      envoyer data a page contact view
@@ -228,7 +228,6 @@
 
   //ft page decoonexion----------------
   public function deconnexion(){
-
     Toolbox::ajouterMessageAlerte("Vous êtes maintenant déconnecté", Toolbox::COULEUR_ORANGE);
     unset($_SESSION['profil']);
     header ("location: " .URL."accueils");
@@ -293,7 +292,6 @@
     }
 
     public function modificationPassword(){
-
         // Envoyer les données dans la view
         $data_page = [
           "view" => "./views/Utilisateur/modificationPassword.view.php",
@@ -301,11 +299,39 @@
           "H1" => "Modifier votre mot  ".$_SESSION['profil']['login'],
           "page_js" => ["modificationPassword.js"],
           "uvp"=> "",
-          "page_title"=> "WebyCloudy | Modification Mot de pass ",
+          "page_title"=> "WebyCloudy | Modification Mot de passe ",
           "template" => "views/common/template.php"
         ];
         $this->genererPage($data_page);
       }
+
+    public function validation_modificationPassword($ancienPassword,$nouveauPassword,$confirmNouveauPassword){
+
+      if($nouveauPassword === $confirmNouveauPassword){
+
+        if($this->utilisateurManager->isCombinaisonValide($_SESSION['profil']['login'],$ancienPassword)){
+          $passwordCrypte = password_hash($nouveauPassword,PASSWORD_DEFAULT);
+
+            if($this->utilisateurManager->bdModificationPassword($_SESSION['profil']['login'],$passwordCrypte)){
+              Toolbox::ajouterMessageAlerte('Le mot de passe a bien été modifié', Toolbox::COULEUR_VERTE);
+              header("Location: ".URL."compte/profil");
+            }else{
+              Toolbox::ajouterMessageAlerte("La modification n'a pas été éffectuée", Toolbox::COULEUR_ROUGE );
+              header("Location: ".URL."compte/modificationPassword");
+
+            }
+
+        }else{
+          Toolbox::ajouterMessageAlerte('La combinaison login /ancien mot de passe ne correspond pas', Toolbox::COULEUR_ROUGE);
+          header('Location :'.URL.'compte/modificationPassword');
+        }
+
+      }else{
+        Toolbox::ajouterMessageAlerte('Les deux 2 nouveaux mots de passe ne correpondent pas', Toolbox::COULEUR_ROUGE);
+        header ('Location :'.URL.'compte/modificationPassword');
+      }
+    }
+
 
 
 
