@@ -1,26 +1,13 @@
 
 
-<div class="mt-5" id= "mail">
-    Mail : <?= $utilisateur['mail'] ?> <br>
-    login: <?= $utilisateur['login']?> <br>
-    <?= $_SESSION['profil']['role'] ?>
-</div>
-
 
 
 
 <?php
-
   $page_description = "Page de profil" ;
-
   $costum_css= "projets.css";
-  //$uvp= "Restons en contact";
-  //$page_title= "WebySites | Contact";
-  //$H1= "Contact";
   $header_content=  include "inc/header.php";
-
   //$page_content=  include "inc/content_profil.php";
-
  ?>
 
 
@@ -29,10 +16,25 @@
      <div class="container">
          <div class="row">
 
+           <div class="m-3 auto text-center" id= "mail">
+               <div class=" m-0 auto bg alert alert-danger  ">
+                 <div class=" col-8">
+                   Mail : <?= $utilisateur['mail'] ?> <br>
+                   login: <?= $utilisateur['login']?> <br>
+                   role: <?= $_SESSION['profil']['role'] ?>
+                 </div>
+                 <div class=" col-4 w-100px">
+                   <img src="<?= URL; ?>public/Assets/images/<?= $utilisateur['image'] ?>" width="100px" alt="photo de profil" />
+                 </div>
+                 <form class=" m-2 auto" action="<?= URL ?>compte/validation_modificationImage" enctype="multipart/form-data" method="post">
+                   <label for="image">Changer l'image de profil</label> <br>
+                   <input type="file" name="" class="form-control-file" id="image" onchange="submit();" value="">
+                 </form>
+               </div>
+           </div>
 
-
-             <div class="" id="mail">
-               Mail : <?= $utilisateur['mail'] ?>
+             <div class="btn btn-primary" id="mail">
+               Modification mail : <?= $utilisateur['mail'] ?>
                <button class="btn btn-primary" id="btnModifMail" type="button" name="button">
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -41,12 +43,12 @@
                </button>
              </div>
 
-             <div class="d-none" id="modificationMail">
+             <div class="d-none bg-gradient-primary" id="modificationMail">
                <form class=""  method="post" action="<?= URL; ?>compte/validation_modificationMail">
-                 <div class="row">
-                   <label for="mail" class="col-2 col-form-label">Mail :</label>
-                   <div class="col-8">
-                     <input type="mail" class="form-control" name="mail" value="<?= $utilisateur['mail'] ?>" />>
+                 <div class="row mt-2   ">
+                   <label for="mail" class="col-3 col-form-label">Nouveau mail :</label>
+                   <div class="col-7">
+                     <input type="mail" class="form-control" name="mail" value="<?= $utilisateur['mail'] ?>" />
                    </div>
                    <div class="col-2">
                      <button type="btn btn-success" id=btnValidModifMail >
@@ -59,11 +61,14 @@
                    </div>
                  </div>
                </form>
-             </div>
+             </div> <br><br>
 
              <!--Bouton qui modifie le mdp -->
-             <div class="">
+             <div class="mt-2">
                <a href="<?= URL ?>compte/modificationPassword" class="btn btn-warning"> Changer le mot de passe</a>
+             </div>
+
+             <div class=" mt-2">
                <button id="btnSupCompte" class="btn btn-danger">Supprimer son compte</button>
              </div>
 
@@ -75,6 +80,9 @@
                  <a href="<?= URL ?>compte/suppressionCompte" class="btn btn-danger"> Je veux supprimer défénitivement mon compte</a>
                </div>
              </div>
+
+             <!-- Formulaire -->
+
 
            </div>
        </div>

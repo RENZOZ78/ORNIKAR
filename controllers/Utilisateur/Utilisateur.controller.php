@@ -226,7 +226,7 @@
       $this->genererPage($data_page);
   }
 
-  //ft page decoonexion----------------
+  //ft page deconexion----------------
   public function deconnexion(){
     Toolbox::ajouterMessageAlerte("Vous êtes maintenant déconnecté", Toolbox::COULEUR_ORANGE);
     unset($_SESSION['profil']);
@@ -239,7 +239,7 @@
 
         $passwordCrypte = password_hash($password,PASSWORD_DEFAULT);
         $clef = rand(0,9999);
-        if($this->utilisateurManager->bdCreerCompte($login,$passwordCrypte,$mail,$clef)){
+        if($this->utilisateurManager->bdCreerCompte($login,$passwordCrypte,$mail,$clef,"profils/profil.png")){
           $this->sendMailValidation($login, $mail, $clef);
           echo "instance avec ". $login,$mail,$clef. "crée!!";
           Toolbox::ajouterMessageAlerte("La compte a été crée, un mail de validation vous sera envoyé", Toolbox::COULEUR_VERTE);
