@@ -113,6 +113,29 @@
     return $estModifier;
   }
 
+  //ft qui va modifier l'image existante en bdd
+  public function bdAjoutImage($login,$image){
+    $req= "UPDATE utilisateur set image = :image WHERE login = :login";
+    $stmt = $this->getBdd()->prepare($req);
+    $stmt->bindValue(":login",$login,PDO::PARAM_STR);
+    $stmt->bindValue(":image",$image,PDO::PARAM_STR);
+    $stmt->execute();
+    $estModifier = ($stmt->rowCount() > 0);
+    $stmt->closeCursor();
+    return $estModifier;
+  }
+
+  //ft qui va recuperer l'ancienne image en bdd
+  public function getImageUtilisateur($login){
+    $req = "SELECT image FROM utilisateur where login = :login";
+    $stmt = $this->getBdd()->prepare($req);
+    $stmt->bindValue(":login",$login,PDO::PARAM_STR);
+    $stmt->execute();
+    $resultat = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $resultat['image'];
+  }
+
 
   }
 

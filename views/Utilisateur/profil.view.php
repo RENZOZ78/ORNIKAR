@@ -24,11 +24,11 @@
                    role: <?= $_SESSION['profil']['role'] ?>
                  </div>
                  <div class=" col-4 w-100px">
-                   <img src="<?= URL; ?>public/Assets/images/<?= $utilisateur['image'] ?>" width="100px" alt="photo de profil" />
+                   <img src="<?= URL; ?>public/Assets/images/<?= $utilisateur['image'] ?>" width="100px"  alt="photo de profil" />
                  </div>
                  <form class=" m-2 auto" action="<?= URL ?>compte/validation_modificationImage" enctype="multipart/form-data" method="post">
                    <label for="image">Changer l'image de profil</label> <br>
-                   <input type="file" name="" class="form-control-file" id="image" onchange="submit();" value="">
+                   <input type="file" name="image" class="form-control-file" id="image" onchange="submit();" value="">
                  </form>
                </div>
            </div>

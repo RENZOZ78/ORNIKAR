@@ -236,7 +236,6 @@
   //ft qui valide un compte , en verifiant que le login n'existe pass
     public function validation_creerCompte($login,$password,$mail){
       if ($this->utilisateurManager->verifLoginDisponible($login)){
-
         $passwordCrypte = password_hash($password,PASSWORD_DEFAULT);
         $clef = rand(0,9999);
         if($this->utilisateurManager->bdCreerCompte($login,$passwordCrypte,$mail,$clef,"profils/profil.png")){
@@ -306,7 +305,6 @@
       }
 
     public function validation_modificationPassword($ancienPassword,$nouveauPassword,$confirmNouveauPassword){
-
       if($nouveauPassword === $confirmNouveauPassword){
 
         if($this->utilisateurManager->isCombinaisonValide($_SESSION['profil']['login'],$ancienPassword)){
@@ -318,7 +316,6 @@
             }else{
               Toolbox::ajouterMessageAlerte("La modification n'a pas été éffectuée", Toolbox::COULEUR_ROUGE );
               header("Location: ".URL."compte/modificationPassword");
-
             }
 
         }else{
@@ -332,6 +329,7 @@
       }
     }
 
+    //ft qui valdie la suppression du compte
     public function validation_suppressionCompte(){
     if($this->utilisateurManager->bdSuppressionCompte($_SESSION['profil']['login'])){
       Toolbox::ajouterMessageAlerte('La suppression du compte est effectué!', Toolbox::COULEUR_VERTE);
@@ -340,6 +338,36 @@
     Toolbox::ajouterMessageAlerte("La suppression du compte n'a pas été effectuée, contacté l'utilisateur", Toolbox::COULEUR_ROUGE);
     header ("location: ".URL."compte/profil");
   }
+    }
+
+
+    /**
+    *Ft qui gere l'ajout de la nouvelle image de profil
+     * suppression de l'ancienne images
+     * ajout de nouvelles images dans le repertoire
+     */
+    public function validation_modificationImage($file){
+      try {
+        $repertoire = "public/Assets/images/profils/".$_SESSION['profil']['login']."/";
+        //Ajout image dans le repertoire
+        $nomImage = Toolbox::ajoutImage($file, $repertoire);
+        //Suppression de l'ancienne image
+        $ancienneImage = $this->utilisateurManager->getImageUtilisateur($_SESSION['profil']['login']);
+        if($ancienneImage !== "profils/profil.png"){
+          unlink("public/Assets/images/".$ancienneImage);
+        }
+        //Ajout de la nouvelle image dans la bdd
+        $nomImageBD = "profils/".$_SESSION['profil']['login']."/".$nomImage;
+        if($this->utilisateurManager->bdAjoutImage($_SESSION['profil']['login'],$nomImageBD)){
+          Toolbox::ajouterMessageAlerte("La modification a été éffectuée", Toolbox::COULEUR_VERTE);
+        }else{
+          Toolbox::ajouterMessageAlerte("La modification de l'image n'a pas été éffectuée");
+        }
+      } catch (\Exception $e) {
+        Toolbox::ajouterMessageAlerte($e->getMessage(), Toolbox::COULEUR_ROUGE);
+      }
+
+      header("Location: ".URL."compte/profil");
     }
 
 
