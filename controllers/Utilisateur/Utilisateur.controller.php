@@ -331,6 +331,10 @@
 
     //ft qui valdie la suppression du compte
     public function validation_suppressionCompte(){
+      //Suppression de l'image
+      $this->dossierSuppressionImageUtilisateur($_SESSION['profil']['login']);
+      //Suppression du dossier
+      rmdir("public/Assets/images/profils/".$_SESSION['profil']['login']);
     if($this->utilisateurManager->bdSuppressionCompte($_SESSION['profil']['login'])){
       Toolbox::ajouterMessageAlerte('La suppression du compte est effectué!', Toolbox::COULEUR_VERTE);
     $this->deconnexion();
@@ -351,11 +355,8 @@
         $repertoire = "public/Assets/images/profils/".$_SESSION['profil']['login']."/";
         //Ajout image dans le repertoire
         $nomImage = Toolbox::ajoutImage($file, $repertoire);
-        //Suppression de l'ancienne image
-        $ancienneImage = $this->utilisateurManager->getImageUtilisateur($_SESSION['profil']['login']);
-        if($ancienneImage !== "profils/profil.png"){
-          unlink("public/Assets/images/".$ancienneImage);
-        }
+        //Supression de l'ancienne images
+        $this->dossierSuppressionImageUtilisateur($_SESSION['profil']['login']);
         //Ajout de la nouvelle image dans la bdd
         $nomImageBD = "profils/".$_SESSION['profil']['login']."/".$nomImage;
         if($this->utilisateurManager->bdAjoutImage($_SESSION['profil']['login'],$nomImageBD)){
@@ -366,11 +367,16 @@
       } catch (\Exception $e) {
         Toolbox::ajouterMessageAlerte($e->getMessage(), Toolbox::COULEUR_ROUGE);
       }
-
       header("Location: ".URL."compte/profil");
     }
 
-
+    //ft private Suppression de l'ancienne image
+    private function dossierSuppressionImageUtilisateur(){
+      $ancienneImage = $this->utilisateurManager->getImageUtilisateur($_SESSION['profil']['login']);
+      if($ancienneImage !== "profils/profil.png"){
+        unlink("public/Assets/images/".$ancienneImage);
+      }
+    }
 
     //ft page erreur qui appelle la ft du parent-------
     //on ne veut pas de page erreur specifique aux visiteur => on laisse la ft principale dans le controlller
