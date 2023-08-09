@@ -35,16 +35,13 @@
             switch ($url[1]){
                 case "creation": $visiteurController->creation_entreprise();
                 break;
-            }
-            switch ($url[2]){
                 case "modification": $visiteurController->modification_entreprise();
                 break;
-            }
-            switch ($url[3]){
                 case "gestion": $visiteurController->gestion_entreprise();
                 break;
-            }
           break;
+          default: throw new exception( "la page n'existe pas");
+          }
 
           case "sites": $visiteurController->site();
           break;
@@ -54,8 +51,11 @@
           break;
           case "marketing":  $visiteurController->marketing();
           break;
+          case "administration": $utilisateurController->administration();
+          break;
           case "login":  $visiteurController->login();
           break;
+
           case "validation_login":
             if(!empty ($_POST['login']) && !empty($_POST['password'])){
               $login = Securite::secureHTML($_POST['login']);

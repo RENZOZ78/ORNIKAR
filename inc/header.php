@@ -17,13 +17,14 @@
                          </li>
 
                          <li class="nav-item mr-1">
-                             <a href="<?= URL; ?>entreprises" class="nav-link">Gestion d'entreprise</a>
+                             <a href="<?= URL; ?>entreprises"  id="navbarDropdown" aria-expanded="false" data-bs-toggle="collapse" class="nav-link dropdown-toggle">Société</a>
                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                 <li><a class="dropdown-item" href="#">Action</a></li>
-                                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                 <li><a class="dropdown-item" href="<?= URL; ?>entreprises/creation">Creation de societe</a></li>
+                                 <li><a class="dropdown-item" href="<?= URL; ?>entreprises/modification">Modifications de Société</a></li>
+                                 <li><a class="dropdown-item" href="<?= URL; ?>entreprises/gestion">Gestion de société</a></li>
                              </ul>
                          </li>
+
                          <li class="nav-item mr-1">
                              <a href="<?= URL; ?>sites" class="nav-link">Site internet</a>
                          </li>
@@ -40,8 +41,8 @@
                              <a href="<?= URL; ?>contact" class="nav-link">Contact</a>
                          </li>
 
-                        <?php if(empty($_SESSION['profil'])) : ?>
-                        }
+                       <!-- si l'utilisateur n'est pas connecté -->
+                      <?php if(!Securite::estConnecte()) : ?>
                          <li class="nav-item mr-1">
                              <a href="<?= URL; ?>login" class="nav-link">Se connecter</a>
                          </li>
@@ -49,18 +50,35 @@
                              <a href="<?= URL; ?>creerCompte" class="nav-link">Créer compte</a>
                          </li>
                        <?php else : ?>
-                       <li class="nav-item mr-1">
-                           <a href="<?= URL; ?>compte/profil" class="nav-link">Profil</a>
-                       </li>
-                       <li class="nav-item mr-1">
-                           <a href="<?= URL; ?>compte/deconnexion" class="nav-link">Se deconnecter</a>
-                       </li>
-                        <?php endif; ?>
+
+                       <!-- si l'utilisateur est connecté -->
+                      <?php if(Securite::estConnecte()) : ?>
+                         <li class="nav-item mr-1">
+                             <a href="<?= URL; ?>compte/profil" class="nav-link">Profil</a>
+                         </li>
+                         <li class="nav-item mr-1">
+                             <a href="<?= URL; ?>compte/deconnexion" class="nav-link">Se deconnecter</a>
+                         </li>
+                       <?php else : ?>
+
+                       <!-- si l'uilitisateur est admin ou superAdmin, il a access a l'onglet admnistration -->
+                      <?php if(Securite::estConnecte() && (Securite::estAdministrateur() || Securite::estSuperAdministrateur() ) ) : ?>
+                        <li class="nav-item ">
+                            <a class="nav-link dropdown-toggle" href="<?= URL; ?>administration"  id="navbarDropdown" aria-expanded="false" data-bs-toggle="collapse" >Administration</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="<?= URL; ?>administration/droits">Gérer les droits</a></li>
+                            </ul>
+                        </li>
+                      <?php endif; ?>
+
+
+
 
                      </ul>
                  </div>
              </div>
          </nav>
+
 
 
          <div class="text-intro">

@@ -52,15 +52,16 @@
     }
 
     //ft qui crée el compte en getBdd
-    public function bdCreerCompte($login,$passwordCrypte,$mail,$clef,$image){
+    public function bdCreerCompte($login,$passwordCrypte,$mail,$clef,$image,$role){
       $req= "INSERT INTO utilisateur (login, password, mail, is_valid, role, clef, image)
-      VALUES (:login, :password, :mail, 0, 'utilisateur', :clef, :image)";
+      VALUES (:login, :password, :mail, 0, :role, :clef, :image)";
       $stmt = $this->getBdd()->prepare($req);
       $stmt->bindValue(":login",$login,PDO::PARAM_STR);
       $stmt->bindValue(":password",$passwordCrypte,PDO::PARAM_STR);
       $stmt->bindValue(":mail",$mail,PDO::PARAM_STR);
       $stmt->bindValue(":clef",$clef,PDO::PARAM_INT);
       $stmt->bindValue(":image",$image,PDO::PARAM_STR);
+      $stmt->bindValue(":role",$role,PDO::PARAM_STR);
       $stmt->execute();
       $estModifier = ($stmt->rowCount() > 0);
       $stmt->closeCursor();
