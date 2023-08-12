@@ -10,8 +10,12 @@
       require_once("./controllers/Utilisateur/Utilisateur.controller.php");
       require_once("./controllers/Toolbox.class.php");
       require_once ("./controllers/securite.class.php");
+      require_once("./controllers/Administrateur/Administrateur.controller.php");
+      require_once("./controllers/SuperAdministrateur/SuperAdministrateur.controller.php");
       $visiteurController = new VisiteurController();
       $utilisateurController = new UtilisateurController();
+      $administrateurController = new AdministrateurController();
+      $sAdministrateurController = new SAdministrateurController();
 
 
       try {
@@ -31,7 +35,8 @@
         switch($page){
           case "accueils": $visiteurController->accueil();
           break;
-          case "entreprises": $visiteurController->entreprise();
+          case "entreprises":
+          //$visiteurController->entreprise();
             switch ($url[1]){
                 case "creation": $visiteurController->creation_entreprise();
                 break;
@@ -49,9 +54,7 @@
           break;
           case "contact":  $visiteurController->contact();
           break;
-          case "marketing":  $visiteurController->marketing();
-          break;
-          case "administration": $utilisateurController->administration();
+          case "marketing": $visiteurController->marketing();
           break;
           case "login":  $visiteurController->login();
           break;
@@ -121,6 +124,46 @@
                   }
                 break;
                 default: throw new exception( "la page n'existe pas");
+              }
+            }
+          break;
+          case "administration":
+            if(!Securite::estConnecte()){
+              Toolbox::ajouterMessageAlerte("Veuillez vous connecter!", Toolbox::COULEUR_ROUGE);
+                header("location: ".URL."Login");
+            } elseif (!Securite::estAdministrateur() && !Securite::estSuperAdministrateur()) {
+              Toolbox::ajouterMessageAlerte("Vous n'avez pas le droit d'être ici ", Toolbox::COULEUR_ROUGE);
+              header("location: ".URL."accueil");
+            }elseif (Securite::estAdministrateur()){
+              switch($url[1]){
+                case "droits": $administrateurController->gestion_droits();
+                break;
+                case "validation_modificationRole" : $administrateurController->validation_modificationRole($_POST['login'], $_POST['role']);
+                break;
+                case "gestionCommandes": $administrateurController->gestion_commandes();
+                break;
+                case "gestionProduits": $administrateurController->gestion_produits();
+                break;
+                case "gestionUtilisateurs": $administrateurController->gestion_utilisateurs();
+                break;
+              }
+
+            }elseif (Securite::estSuperAdministrateur()){
+              switch($url[1]){
+                case "droits": $administrateurController->gestion_droits();
+                break;
+                case "validation_modificationRole" : $administrateurController->validation_modificationRole($_POST['login'], $_POST['role']);
+                break;
+                case "gestionCommandes": $administrateurController->gestion_commandes();
+                break;
+                case "gestionProduits": $administrateurController->gestion_produits();
+                break;
+                case "gestionFullUtilisateur": $sAdministrateurController->gestion_full_utilisateur();
+                break;
+                case "validationModificationFullUtilisateur" : $sAdministrateurController->validation_modification_full_utilisateur($_POST['login'], $_POST['mail'], $_POST['role'], $_POST['is_valid'], $_POST['role']);
+                break;
+
+                default : throw new Exception("La page n'existe pas");
               }
             }
           break;

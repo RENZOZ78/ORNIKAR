@@ -14,7 +14,6 @@
     }
 
     public function isCombinaisonValide($login, $password){
-
       $passwordBD = $this->getPasswordUser($login);
       echo $passwordBD;
       echo 'la combinaison login password est bonne';

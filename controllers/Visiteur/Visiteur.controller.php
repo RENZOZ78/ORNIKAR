@@ -50,9 +50,9 @@
       $produits = $this->visiteurManager->getProduits();
 
       //afficher les alertes
-      Toolbox::ajouterMessageAlerte("test", Toolbox::COULEUR_VERTE);
-      Toolbox::ajouterMessageAlerte("Super", Toolbox::COULEUR_ROUGE);
-      Toolbox::ajouterMessageAlerte("Great", Toolbox::COULEUR_ORANGE);
+      //Toolbox::ajouterMessageAlerte("test", Toolbox::COULEUR_VERTE);
+      //Toolbox::ajouterMessageAlerte("Super", Toolbox::COULEUR_ROUGE);
+      //Toolbox::ajouterMessageAlerte("Great", Toolbox::COULEUR_ORANGE);
 
       // Envoyer les données dans la view
       $data_page = [
@@ -67,31 +67,62 @@
       $this->genererPage($data_page);
     }
 
-    //ft page cretion entreprise-----------
+    //ft page creation entreprise-----------
     public function creation_entreprise(){
       //recuperation des données de la variables data de l'instance mainManager
-      $produits = $this->mainManager->getProduits();
-
-      //afficher les alertes
-      Toolbox::ajouterMessageAlerte("test", Toolbox::COULEUR_VERTE);
-      Toolbox::ajouterMessageAlerte("Super", Toolbox::COULEUR_ROUGE);
-      Toolbox::ajouterMessageAlerte("Great", Toolbox::COULEUR_ORANGE);
+      $produits = $this->visiteurManager->getProduits();
 
       // Envoyer les données dans la view
       $data_page = [
-        "view" => "./views/Visiteur/entreprise.view.php",
+        "view" => "./views/Visiteur/creation_entreprise.view.php",
         "custom_css" => ["style.css", "accueil.css"],
         "H1" => "Créer votre société",
           "produits" => $produits,
-        "uvp"=> "Vos projets sont nos inspirations",
-        "page_title"=> "WebyCloudy | Société ",
+        "uvp"=> "Il est temps de passer à l'action",
+        "page_title"=> "WebyCloudy | création société ",
         "template" => "views/common/template.php"
       ];
       $this->genererPage($data_page);
     }
 
-    //ft page site-----------------------
-    public function site(){
+    //ft page gestion entreprise-----------
+    public function gestion_entreprise(){
+      //recuperation des données de la variables data de l'instance mainManager
+      $produits = $this->visiteurManager->getProduits();
+
+      // Envoyer les données dans la view
+      $data_page = [
+        "view" => "./views/Visiteur/gestion_entreprise.view.php",
+        "custom_css" => ["style.css", "accueil.css"],
+        "H1" => "Gérer votre société",
+          "produits" => $produits,
+        "uvp"=> "Gérer votre société pour donner la bonne direction",
+        "page_title"=> "WebyCloudy | gestion société ",
+        "template" => "views/common/template.php"
+      ];
+      $this->genererPage($data_page);
+    }
+
+      //ft page modification entreprise-----------
+      public function modification_entreprise(){
+      //recuperation des données de la variables data de l'instance mainManager
+      $produits = $this->visiteurManager->getProduits();
+
+      // Envoyer les données dans la view
+      $data_page = [
+        "view" => "./views/Visiteur/suppression_entreprise.view.php",
+        "custom_css" => ["style.css", "accueil.css"],
+        "H1" => "Modification votre société",
+        "produits" => $produits,
+        "uvp"=> "Effectuer toutes les modifications",
+        "page_title"=> "WebyCloudy | Suppression société ",
+        "template" => "views/common/template.php"
+      ];
+      $this->genererPage($data_page);
+    }
+
+      //ft page site-----------------------
+      public function site(){
       //recuperation des données de la variables produit de l'instance mainManager a partir de bdd
       $produits = $this->visiteurManager->getProduits();
 
