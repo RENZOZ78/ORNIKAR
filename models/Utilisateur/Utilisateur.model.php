@@ -12,7 +12,7 @@
       $stmt->closeCursor();
       return $resultat['password'];
     }
-
+    //ft qui verifie si la combinaison login pwd est valide en pbdd
     public function isCombinaisonValide($login, $password){
       $passwordBD = $this->getPasswordUser($login);
       echo $passwordBD;
@@ -20,6 +20,7 @@
       return password_verify($password, $passwordBD);
       }
 
+      //ft qui affiche  l'etat d'activation d'un compte en bddd
     public function estCompteActive($login){
       //test return false;
       $req = "SELECT is_valid FROM utilisateur where login = :login";
@@ -31,7 +32,7 @@
       return ((int)$resultat['is_valid'] ===0) ? false : true;
     }
 
-    //ft utilisateurManager
+    //ft qui recupere toutes les infos de l'utilisateur en bdd
     public function getUserInformation($login){
       //test return false;
       $req = "SELECT * FROM utilisateur where login = :login";
@@ -50,7 +51,7 @@
       return  empty($utilisateur);
     }
 
-    //ft qui crée el compte en getBdd
+    //ft qui crée le compte en getBdd
     public function bdCreerCompte($login,$passwordCrypte,$mail,$clef,$image,$role){
       $req= "INSERT INTO utilisateur (login, password, mail, is_valid, role, clef, image)
       VALUES (:login, :password, :mail, 0, :role, :clef, :image)";
@@ -79,7 +80,7 @@
       return $estModifier;
     }
 
-    // fffft qui valide la modif du mdp en bdd
+    // fffft qui valide la modif du mail en bdd
     public function bdValidationModificationMail($login,$mail){
       $req= "UPDATE utilisateur set mail = :mail WHERE login = :login";
       $stmt = $this->getBdd()->prepare($req);
@@ -91,6 +92,7 @@
       return $estModifier;
     }
 
+    //ft qui valide la modif du pwd en bdd
     public function bdModificationPassword($login,$password){
       $req= "UPDATE utilisateur set password = :password WHERE login = :login";
       $stmt = $this->getBdd()->prepare($req);

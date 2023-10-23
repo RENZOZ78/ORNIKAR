@@ -6,9 +6,17 @@
 
              <div class="container cont_nav">
 
+               <!-- <iframe src="public\Assets\images\accueil\logo_aigle.svg"
+               width="100" height="100" style="border:1;"></iframe> -->
+
+               <object type="image/svg+xml" class="logo_aigle" data="public\Assets\images\accueil\logo_aigle.svg"
+	width="100" height="100" ></object>
+
                  <a href="<?= URL; ?>accueils" class="navbar-brand">WebyCloudy</a>
+
+
                  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                     <span class="navbar-toggler-icon" ></span>
+                     <span class="navbar-toggler-icon"></span>
                  </button>
 
                  <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -92,8 +100,8 @@
          <div class="text-intro">
              <div class="preTxt font-italic"><?= $uvp; ?></div>
              <h1><?= $H1; ?></h1>
-             <a href="<?= URL; ?>index.php" class=" btn btn_nav btn-dark mt-3">En savoir Plus</a>
-             <a href="<?= URL; ?>projets.php" class=" btn btn_nav btn-outline-dark mt-3">Nos projets</a>
+             <!-- <a href="<?= URL; ?>index.php" class=" btn btn_nav btn-dark mt-3">En savoir Plus</a>
+             <a href="<?= URL; ?>projets.php" class=" btn btn_nav btn-outline-dark mt-3">Nos projets</a> -->
          </div>
 
      </div>

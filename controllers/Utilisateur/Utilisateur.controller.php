@@ -107,6 +107,7 @@
       }
     }
 
+    //ft qui modifie le mail
     public function validation_modificationMail($mail){
       //echo "entree";
       if($this->utilisateurManager->bdValidationModificationMail($_SESSION['profil']['login'],$mail)){

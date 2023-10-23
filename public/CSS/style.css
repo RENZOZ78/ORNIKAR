@@ -2,6 +2,7 @@
 
 *,*::before,*::after{
 	box-sizing:border-box;
+
 }
 html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
 pre,form,fieldset,input,textarea,p,blockquote,th,td,
@@ -9,8 +10,15 @@ header,footer,aside,nav,article,figure,figcaption{
 	margin:0;
 	padding:0;
 }
+
+body{
+	background-color: #ffd012ad;
+}
+
 fieldset,img{
-	border:0;
+	border: 1px;
+  border-radius: 20px;
+  padding: 5px;
 }
 address,caption,cite,code,dfn,em,strong,th,var{
 	font-style:normal;
@@ -42,10 +50,24 @@ a:active,a:focus{
 
 /* GENERAL */
 h2{
-  font-size: 70px;
+  font-size: 60px;
 padding-top: 80px;
 padding-bottom: 50px;
 font-family: 'Kaushan Script';
+}
+
+h4{
+  font-size: 15px;
+padding: 5px;
+background-color: #0d6efd;
+border: 1px;
+border-radius: 10px;
+	color: whitesmoke;
+border-bottom-width: thick;
+font-family: sans-serif roboto;
+margin: 0 auto 15px;
+width: auto;
+
 }
 
 
@@ -55,11 +77,11 @@ header{
     background: url('img/bgphotshop.png')  ;
     background-size: cover;
     background-position: center;
-    height: 55vh;
+    height: 400px;
 }
 
 .text-intro{
-    padding-top: 15rem;
+    padding-top: 5rem;
     /* padding-bottom: 200px; */
     text-align: center;
 }
@@ -77,13 +99,11 @@ h1{
     color: #2f2d2d;
     font-family: 'Kaushan Script';
     font-weight: 700;
-
 }
 
 .alert-success{
 	top: 20px;
 }
-
 
 
 /*------------------------------NAVIGATION: la navigation va se retrecir quand on va sroller sur le contenue + animation en js */
@@ -105,6 +125,12 @@ h1{
     transition: all 0.4s ease;
 }
 
+.navbar a.nav-link:hover {
+  color: black;
+  background-color: black;
+  border-radius: 10px;
+}
+
     /* animation barre navigation: des qu'on scroll de plus de 30px= la barre va se reduire */
 .navbar.opaque .navbar-brand{
     font-size: 27px!important;
@@ -116,27 +142,85 @@ h1{
 }
 
 
-/* -A PROPOS ---------------------- */
+/* -A PROPOS & VALEUR AJOUTE ACCORDION ---------------------- */
 
 #aPropos{
-    margin-top: 30px;
-    padding-bottom: 75px;
+    margin-top: 70px;
+    padding-bottom: 50px;
     border-bottom: 1px dashed #2f2d2d;
+		background-color: whitesmoke;
+  	/* padding-top: 50px; */
+}
 }
 h2.about{
-  font-size: 70px;
-  padding-top: 80px;
-  padding-bottom: 50px;
+  font-size: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-family: 'Kaushan Script';
   margin: 0 auto;
   width: 100%;
 }
+
+.about_table{
+	min-height: 300px;
+	padding: 15px;
+	border: 1px solid blue;
+	border-radius: 20px;
+	box-shadow: 10px 3px 3px blue;
+}
+
+/* .accordion_border{
+	border-radius: 20px;
+	border: 1px solid blue;
+	box-shadow: 5px 3px 3px blue;
+	padding: 10px;
+} */
+
+
+/* btn accordion */
+.accordion_btn {
+  background-color: #fff;
+	color: black;
+  position: relative;
+  background-image: url("https://example.com/image.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  transition: background-color 0.8s ease-in-out;
+	border-radius: 10px;
+}
+
+@keyframes toggle-background {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+
+}
+
+.accordion_btn:active {
+  animation: toggle-background 1s ease-in-out forwards;
+  animation-fill-mode: backwards;
+}
+
+.accordion_btn:hover {
+  background-color: #0d6efd;
+	color: white;
+}
+
+
+
+
 
 /* ---------------------------Trois icones */
 #icones{
     padding-top: 75px;
     padding-bottom:75px;
     border-bottom: 1px dashed #2f2d2d;
+		width: 90%;
+		margin: 0 auto;
+
 }
 .icone_titre{
   font-size: 40px;
@@ -146,17 +230,18 @@ h2.about{
 
 #ban1{
     position: relative;
-    background: url('img/banniere1.png')   ;
+    background: url("img/banniere1.png");
+		background-image: url("../img/banniere1.png");
     background-position: right;
     background-attachment: fixed;
     background-repeat: no-repeat;
     text-align: center;
+		background-color: whitesmoke;
 }
 
 /*---------------------------- Galerie */
 #galerie{
     padding-bottom:100px;
-
 }
 
 /* .h2Photos{
@@ -176,8 +261,8 @@ img.img-fluid{
 }
 
 h2.titre_site{
-
    color: #22a7f0;
+	 font-size: 60px;
 }
 
 h2{
@@ -185,6 +270,7 @@ h2{
   color: #0b5ed7;
   margin-top: 30px;
   text-shadow: 4px 3px 0px rgba(0,0,0,0.3);
+	font-size=60px;
 }
 
 /*------------------------------- seconde banniere */
@@ -196,6 +282,7 @@ h2{
     background-attachment: fixed;
     background-repeat: no-repeat;
     text-align: center;
+		background-color: whitesmoke;
 }
 
 #carouselContent{
@@ -224,10 +311,12 @@ h2{
     position: relative;
     transition: 0.2s ease-in;
     box-shadow: 0px 10px 30px #000;
+		background-color: white;
 }
 
 .threeCards:hover{
     transform:scale(1.1);
+		z-index: 1000;
 }
 
 .header{
@@ -251,6 +340,7 @@ top: 200px;
 /* margin-top: 200px; */
 padding-top: 10px;
 text-align: center;
+font-size=60px;
 }
 
 span#spanPrix{
@@ -258,8 +348,9 @@ span#spanPrix{
     height: 50px;
 }
 
-h2.promess{
+h2.promes{
     padding-top: 50px;
+		font-size=60px;
 }
 
 .type{
@@ -301,7 +392,6 @@ h2.promess{
 #btn {
     background: #fff;
     height: 50px;
-
 }
 
 #btn a {
@@ -316,7 +406,7 @@ h2.promess{
     top: 10px;
     border-radius: 30px;
     border: 1px solid #22a7f0;
-    transition: all 0.2s ease-in;
+    transition: all 0.8s ease-in;
 }
 
 
@@ -331,36 +421,105 @@ h2.promess{
 
 /* progress competences-------------------------- */
 
-#progress{
+/* #progress{
     border-top: 1px dashed #000;
     /* border-bottom: 1px solid #000; */
-    padding-top: 100px;
+    /* padding-top: 100px;
     padding-bottom: 100px;
-
-}
+}  */
 h2.competences{
   font-size: 40px;
   padding-top: 0;
+	padding-bottom: 10px;
+}
+
+/*   PRESTATIONS--------------------*/
+svg text{
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.prestations{
+	padding-top: 0px !important;
+}
+
+ .btn-group{
+	margin-top: 10px;
+}
+
+.img_card{
+	object-fit: fill;
+	margin: 0 auto;
+	border: 1px;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.img_rx, .img_entreprise, .img_site, .img_marketing  {
+width: 100%;
+margin: 0 auto;
+}
+
+.img_rx:hover, .img_entreprise:hover, .img_site:hover, .img_marketing:hover{
+    transform:scale(1.1);
+		z-index: 1000;
+		transition: 0.5s ease-in-out;
+}
+
+.card{
+	padding: 15px;
+}
+
+.button_card:hover{
+	background-color: #0d6efd;;
+	color: white;
 }
 
 
-/* clients---------------------------- */
+/* CLIENTS LOGO---------------------------- */
 
 #clients{
     border-top: 1px dashed #000;
     border-bottom: 1px solid #0000;
     padding-top: 50px;
     padding-bottom: 50px;
+		background-color: white;
 }
 
-/* FOOTER*/
+/*   TARIFS--------------------*/
+
+
+/* CONTACT***************/
+#contact{
+	background-color: alwhitesmoke;
+}
+
+/* FOOTER------------------*/
 footer{
   background-color: #0d6efd;
   color: white;
 }
 
 
-/*--- MEDIA QUERY---------------------- */
+/*--- MEDIA QUERY----------------------------------------------------------- */
+
+
+@media screen and (max-width: 1260px){
+	.text-intro h1{
+		margin-bottom: 30px;
+	}
+	.navbar{
+		flex-wrap: wrap;
+	}
+	.navbar a.nav-link {
+  font-size: 20px;
+}
+
+.navbar-nav {
+
+    flex-direction: row;
+  width: max-content;
+}
 
 
 
@@ -381,17 +540,14 @@ footer{
     }
 }
 
+
+
 @media screen and (max-width: 1000px){
-
-
     .threeCards{
 
             margin: 0 auto 30px;
         }
-
-
-
-}
+			}
 
 @media screen and (min-width: 800px){
 
@@ -399,16 +555,24 @@ footer{
     font-size: 90px;
   }
   header{
-    height: fit-content;
+    height: 30vh;
     padding: 15px;
+		margin-top: 200px;
   }
 }
 
+
+
 @media screen and (max-width: 800px){
-  header{
-    height: fit-content;
-    padding: 15px;
-  }
+	header {
+	 height: 20vh;
+	 padding: 15px;
+ }
+
+ .navbar-nav {
+	flex-direction: column;
+	margin: 0 auto; 
+}
     .preTxt{
         font-size: 30px;
 
@@ -420,22 +584,20 @@ footer{
 
 				padding: 100px auto;
         text-align: center;
-
-
+				padding-top: 5vh;
     }
+
     .section_title, .section_text{
               text-align: center;
             }
-
-
 }
 
 @media screen and (max-width: 762px){
 
-   #progress{
+   /* #progress{
        padding-top : 30px;
        padding-bottom: 30px;
-    }
+    } */
     .preTxt{
         font-size: 20px;
 
@@ -449,31 +611,124 @@ footer{
     h2.competences{
       font-size: 70px;
     }
+		.img_rx, .img_entreprise, .img_site, .img_marketing {
+			object-fit: cover;
+		}
+
+		.aPropos2 {
+  margin-bottom: 20px;
+}
+
 }
 
 @media screen and (min-width: 600px){
-  .text-intro{
-    padding-top: 10rem  ;
-  }
+		.text-intro {
+		height: 100%;
+		padding-top: 10vh;
+		padding-bottom: auto;
+		height: auto;
+	}
 }
 
 @media screen and (max-width: 600px){
+
+	body{
+		background-color: whitesmoke;
+	}
+
+	#main-nav{
+		border-radius: 20px;
+		padding: 10px;
+		padding: 10px 20px ;
+		width: 90%;
+		margin: 10px auto 0;
+		position: absolute;
+}
 
  .sect_tit_txt{
     margin:15px 12px 15px;
   }
 
+	header {
+ 	/* display: flex; */
+ 	/* margin: 55px auto;  */
+ 	 background-color: rgba(15, 255, 15, 0.5);
+ 	 background-position: 10px;
+ 	border-radius: 20px;
+ 	/* padding: 10px;*/
+ 	/* padding: 10px 70px ; */
+ 	 width: 90%;
+ 	margin: 80px auto 10px;
+ 	/* text-align: center;   */
+ 	height: 35vh;
+	box-shadow: 5px 3px 3px blue;
+ }
+
+.about1 {
+	background-color: yellow;
+  border-radius: 20px;
+  box-shadow: 5px 3px 3px blue;
+	padding: 10px 10px 10px;
+	width: 90%;
+	margin: 40px 20px;
+
+}
+
+.about_table {
+  min-height: 300px;
+  padding: 15px;
+	box-shadow: none;
+	border: none;
+
+
+}
+
+.accordion_border, .card {
+	background-color: #81fa81;
+}
+
+#icones{
+	background-color: yellow;
+  border-radius: 20px;
+  box-shadow: 5px 3px 3px blue;
+	padding: 10px 10px 10px;
+}
+
+.galaxy2{
+	background-color: yellow;
+	border-radius: 20px;
+	box-shadow: 5px 3px 3px blue;
+	width: 90%;
+	margin: 0 auto;
+
+}
+
+
+	h2, .offreH{
+		font-size: 40px;
+		padding-top: 30px;
+		text-align: cetner;
+	}
+
   h2.section_title.text-center{
     font-size: 40px;
     padding-top: 30px;
   }
+
+.lead{
+	display: none;
+}
+
+.album{
+	padding:  10px;
+}
+
   p.section_text{
     padding-top: 0;
   }
   h3.titre_site{
     padding-top: 20px;
   }
-
 
   .projects_section{
     display: block;
@@ -483,27 +738,25 @@ footer{
     text-align: center;
   }
 
-	#main-nav{
-		border-radius: 20px;
-		padding: 10px;
-		padding: 10px 70px ;
-		width: auto;
-		margin: 15px 12px;
-		position: absolute;
+
+
+
+
+ #aPropos {
+  margin-top: 10px;
 }
 
-	 header {
-		/* display: flex; */
-		/* margin: 55px auto;  */
-		 background-color: rgba(15, 255, 15, 0.5);
-		 background-position: 10px;
-		border-radius: 20px;
-		/* padding: 10px;*/
-		/* padding: 10px 70px ; */
-		 width: auto;
-		margin: 0 12px;
-		/* text-align: center;   */
- }
+#ban2 {
+  min-height: 200px;
+}
+
+#cartes {
+  padding: 50px 0 20px 0;
+}
+
+#carouselContent {
+  margin-top: 10px;
+}
 
   .project {
       display: block;
@@ -529,6 +782,15 @@ footer{
       text-align: center;
   }
 
+	.card{
+		border-radius: 20px;
+		padding: 20px;
+	}
+
+	.threeCards {
+	 margin: 0 auto 60px;
+ }
+
 
   footer{
     /* background-color: whitesmoke ;*/
@@ -545,9 +807,47 @@ footer{
   img{
     display: block;
     /* width: 80%; */
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+				/* border: 1px solid black; */
+		/* border-radius: 20px; */
+		padding: 10px;
   }
+
+	.img_marque{
+		/* border-radius:20px;
+		border: 1px solid black;
+		padding: 5px; */
+	}
+
+.creationS{
+		background-image: url(..\public\Assets\images\profils\didier\56226_zac-durant-_6HzPU9Hyfg-unsplash.jpg);
+	}
+
+	.site{
+		background-image: image();
+	}
+
+	.rx{
+			background-image: image();
+		}
+
+	.marketing{
+		background-image: image();
+	}
+
+	/* client */
+	.img_marque{
+		margin: 0 auto;
+  	width: min-content;
+	}
+
+}
+
+	svg rect{
+		border: 1px solid;
+		border-radius: 20px;
+	}
 
   p.project_text{
     text-align: justify;
@@ -568,7 +868,7 @@ footer{
 
   .text-intro{
     height: 100%;
-    padding-top: 20vh;
+		padding-top: 5vh;
     padding-bottom: auto;
   }
 
@@ -577,9 +877,42 @@ footer{
     margin-left: -40px;
 		display: none;
       } */
+
+			.valeur_ajoute{
+				background-color: #81fa81;
+				border-radius: 20px;
+				box-shadow: 5px 3px 3px blue;
+				width: 90%;
+				margin: 40px auto 50px;
+				padding: 10px;
+			}
+
+			.border_contact{
+			  background-color: #81fa81;
+			  border-radius: 20px;
+			  box-shadow: 5px 3px 3px blue;
+			  width: 90%;
+			  margin: 0 auto ;
+			  padding: 10px;
+
+			}
+
+			#prix{
+				background-color: #81fa81;
+				border-radius: 20px;
+				box-shadow: 5px 3px 3px blue;
+				width: 90%;
+				margin: 0 auto 50px;
+				padding: 10px;
+			}
   }
 
-
+	@media screen and (max-width: 526px){
+		.navbar-brand {
+	  font-size: 35px !important;
+	  font-family: 'Kaushan Script!important';
+}
+	}
 
 @media screen and (max-width: 500px){
 
@@ -587,7 +920,7 @@ footer{
 			transform: scale(0.8);
 	}
 	.navbar-brand{
-			font-size: 35px!important;
+			font-size: 25px!important;
 	}
 	.preTxt{
 			font-size: 25px;
@@ -596,14 +929,47 @@ footer{
 	h1{
 			font-size: 51px;
 	}
-}
+
+
+	}
+
 
 
  @media screen and (max-width:420px){
 
+/* navbar *****************/
+
+header{
+	margin-top: 10vh;
+}
+
+.navbar-nav {
+ flex-direction: column;
+ width: auto;
+}
+	 .navbar-brand{
+		 display: none;
+	 }
+	 .logo_aigle{
+		 height: 150px;
+		 width:150px;
+		 margin: 0 auto;
+	 }
+	 .navbar a.nav-link{
+		 font-size: 13px;
+	 }
+	 .navbar-dark .navbar-toggler {
+	  color: rgba(255,255,255,.55);
+	  border-color: rgba(255,255,255,.1);
+	  border: 2px solid whitesmoke;
+	  margin-right: 25px;
+	}
+	.navbar-nav li {
+	  margin: auto;
+	}
 
     .text-intro {
-        padding-top: 100px;
+        padding-top: 5vh;
     }
 
 		.container.cont_nav{
@@ -615,16 +981,16 @@ footer{
 		}
 
     h1{
-      padding-top: 20px;
+      padding-top: 8px;
       font-size: 30px;
     }
     h2.about, h2.text-center, h2.offreH, h2.competences{
-      font-size: 50px;
+      font-size: 60px;
       padding-top: 40px;
     }
 		.container.cont_nav{
 	    display: flex;
-	    justify-content: space-between;
+	    justify-content:  center;;
 	    flex-wrap: nowrap;
 	    align-items: center;
 	    /* width: 100%; */

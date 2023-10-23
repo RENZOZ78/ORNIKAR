@@ -16,16 +16,6 @@
     public  function accueil(){
       //echo password_hash("test", PASSWORD_DEFAULT);
 
-      //Afficher les alertes
-      Toolbox::ajouterMessageAlerte("test", Toolbox::COULEUR_VERTE);
-      Toolbox::ajouterMessageAlerte("Toutes les reponses a vos questions se trouvent ici", Toolbox::COULEUR_ROUGE);
-      Toolbox::ajouterMessageAlerte("Great", Toolbox::COULEUR_ORANGE);
-
-      //recuperer les donnés getUtilisateurs
-      $utilisateurs = $this->visiteurManager->getUtilisateurs();
-      //print_r($utilisateurs);
-      //printf($utilisateurs);
-
       //recuperation des données de la variables data de l'instance mainManager
         $produits = $this->visiteurManager->getProduits();
         print_r($produits);
@@ -47,12 +37,7 @@
     //ft page entreprise-----------------
     public function entreprise(){
       //recuperation des données de la variables data de l'instance mainManager
-      $produits = $this->visiteurManager->getProduits();
-
-      //afficher les alertes
-      //Toolbox::ajouterMessageAlerte("test", Toolbox::COULEUR_VERTE);
-      //Toolbox::ajouterMessageAlerte("Super", Toolbox::COULEUR_ROUGE);
-      //Toolbox::ajouterMessageAlerte("Great", Toolbox::COULEUR_ORANGE);
+      $produits = $this->visiteurManager->getProduits();  
 
       // Envoyer les données dans la view
       $data_page = [
