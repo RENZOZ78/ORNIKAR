@@ -51,34 +51,50 @@ a:active,a:focus{
 /* GENERAL */
 h2{
   font-size: 60px;
-padding-top: 80px;
-padding-bottom: 50px;
+padding-top: 8vh;
+padding-bottom: 5vh;
 font-family: 'Kaushan Script';
+}
+
+h3{
+	font-size: 30px;
+	padding: 10px;
+	margin: 7vh 0 2vh;
+	font-family: 'Kaushan Script';
+	background-color: blue;
+	color: whitesmoke;
+	width: fit-content;
+	border-radius: 0px 20px 20px 0;
+
 }
 
 h4{
   font-size: 15px;
-padding: 5px;
-background-color: #0d6efd;
-border: 1px;
-border-radius: 10px;
-	color: whitesmoke;
-border-bottom-width: thick;
-font-family: sans-serif roboto;
-margin: 0 auto 15px;
-width: auto;
+	padding: 5px;
+	border: 1px;
+	border-radius: 10px;
+	border-bottom-width: thick;
+	font-family: sans-serif roboto;
+	margin: 0 auto 15px;
+	width: auto;
 
 }
 
 
 /*Header-------------------------*/
 
-header{
-    background: url('img/bgphotshop.png')  ;
-    background-size: cover;
-    background-position: center;
-    height: 400px;
+.img_top{
+	background-image:
+	/* linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),  */
+	url("https://webycloudy.com/img/bgphotshop.png");
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	witdh: 100%;
+	z-index: 1000;
+
 }
+
 
 .text-intro{
     padding-top: 5rem;
@@ -97,7 +113,8 @@ header{
 h1{
     font-size: 150px;
     color: #2f2d2d;
-    font-family: 'Kaushan Script';
+    /* font-family: 'Kaushan Script'; */
+		font-family: inherit;
     font-weight: 700;
 }
 
@@ -118,16 +135,16 @@ h1{
 }
 
 .navbar a {
-    color: #fff!important;
+    color: black!important;
     font-family: 'Lato';
     font-size: 22px;
     font-weight: 700;
-    transition: all 0.4s ease;
+    transition: all 0.6s ease;
 }
 
 .navbar a.nav-link:hover {
-  color: black;
-  background-color: black;
+  color: blue;
+  background-color: whitesmoke;
   border-radius: 10px;
 }
 
@@ -151,6 +168,8 @@ h1{
 		background-color: whitesmoke;
   	/* padding-top: 50px; */
 }
+
+
 }
 h2.about{
   font-size: 60px;
@@ -169,12 +188,12 @@ h2.about{
 	box-shadow: 10px 3px 3px blue;
 }
 
-/* .accordion_border{
+.accordion_border{
 	border-radius: 20px;
 	border: 1px solid blue;
 	box-shadow: 5px 3px 3px blue;
 	padding: 10px;
-} */
+}
 
 
 /* btn accordion */
@@ -271,6 +290,8 @@ h2{
   margin-top: 30px;
   text-shadow: 4px 3px 0px rgba(0,0,0,0.3);
 	font-size=60px;
+	width: max-content;
+  margin: 30px auto 1%;
 }
 
 /*------------------------------- seconde banniere */
@@ -292,7 +313,7 @@ h2{
     font-weight: 400;
 }
 
-/*-------------------------------------- Cartes prix */
+/*----CARTES TARIFS *****************************/
 
 .offreH{
     font-size: 70px;
@@ -302,7 +323,13 @@ h2{
 }
 
 #cartes{
-    padding: 50px 0 100px 0;
+    padding: 50px 0 20px 0;
+		width: 95%;
+		margin: 0 auto;
+}
+
+.carte2{
+	width: inherit;
 }
 
 .threeCards{
@@ -371,7 +398,7 @@ h2.promes{
     font-size: 30px;
     position: relative;
     /* top: 30px; */
-    padding-top: 10px
+    padding: 10px
 }
 
 .details{
@@ -413,8 +440,8 @@ h2.promes{
 #btn a:hover{
     background: rgba(6,136,206,0.8);
     color: #fff;
-
 }
+
 
 /* bouton envoyer */
 
@@ -513,12 +540,18 @@ footer{
 	}
 	.navbar a.nav-link {
   font-size: 20px;
-}
+	}
 
-.navbar-nav {
+	.navbar-nav {
 
-    flex-direction: row;
-  width: max-content;
+	    flex-direction: row;
+	  width: max-content;
+	}
+	h2{
+		width:max-content;
+	}
+
+
 }
 
 
@@ -548,6 +581,9 @@ footer{
             margin: 0 auto 30px;
         }
 			}
+			#ban1 h2{
+				width: auto;
+			}
 
 @media screen and (min-width: 800px){
 
@@ -556,13 +592,13 @@ footer{
   }
   header{
     height: 30vh;
-    padding: 15px;
-		margin-top: 200px;
+    padding: 0;
+		margin-top: 0;
   }
 }
 
 
-
+/* ME MAX 800PX *************************/
 @media screen and (max-width: 800px){
 	header {
 	 height: 20vh;
@@ -571,7 +607,7 @@ footer{
 
  .navbar-nav {
 	flex-direction: column;
-	margin: 0 auto; 
+	margin: 0 auto;
 }
     .preTxt{
         font-size: 30px;
@@ -581,7 +617,6 @@ footer{
         font-size: 71px;
     }
     .text-intro{
-
 				padding: 100px auto;
         text-align: center;
 				padding-top: 5vh;
@@ -592,6 +627,7 @@ footer{
             }
 }
 
+/* MEDIA QUERY MAX-762PX *************************************/
 @media screen and (max-width: 762px){
 
    /* #progress{
@@ -621,15 +657,17 @@ footer{
 
 }
 
+/* MEDIA  MIN-600PX ******************************************/
 @media screen and (min-width: 600px){
 		.text-intro {
-		height: 100%;
-		padding-top: 10vh;
-		padding-bottom: auto;
-		height: auto;
+			height: 100%;
+			padding-top: 10vh;
+			padding-bottom: auto;
+			height: auto;
 	}
 }
 
+/* MEDIA  MAX-600PX ******************************************/
 @media screen and (max-width: 600px){
 
 	body{
@@ -650,22 +688,17 @@ footer{
   }
 
 	header {
- 	/* display: flex; */
- 	/* margin: 55px auto;  */
- 	 background-color: rgba(15, 255, 15, 0.5);
+		background-color: #ffdf5e;
  	 background-position: 10px;
  	border-radius: 20px;
- 	/* padding: 10px;*/
- 	/* padding: 10px 70px ; */
  	 width: 90%;
  	margin: 80px auto 10px;
- 	/* text-align: center;   */
  	height: 35vh;
 	box-shadow: 5px 3px 3px blue;
  }
 
 .about1 {
-	background-color: yellow;
+	background-color: #ffdf5e;
   border-radius: 20px;
   box-shadow: 5px 3px 3px blue;
 	padding: 10px 10px 10px;
@@ -679,28 +712,45 @@ footer{
   padding: 15px;
 	box-shadow: none;
 	border: none;
-
-
+}
+.valeur_ajoute{
+	background-color: #ffdf5e;
+  border-radius: 20px;
+  box-shadow: 5px 3px 3px blue;
+	padding: 10px 10px 10px;
+	width: 90%;
+	margin: 40px 20px;
 }
 
 .accordion_border, .card {
-	background-color: #81fa81;
+	background-color: #ffdf5e;
+}
+.accordion_border{
+	padding: 15px;
+	box-shadow: none;
+	border: none;
+}
+.card-header{
+	border: none;
+	background-color: inherit;
+}
+.accordion_btn{
+	background-color: inherit;
 }
 
 #icones{
-	background-color: yellow;
+	background-color: #ffdf5e;
   border-radius: 20px;
   box-shadow: 5px 3px 3px blue;
 	padding: 10px 10px 10px;
 }
 
 .galaxy2{
-	background-color: yellow;
+	background-color: #ffdf5e;
 	border-radius: 20px;
 	box-shadow: 5px 3px 3px blue;
 	width: 90%;
 	margin: 0 auto;
-
 }
 
 
@@ -737,9 +787,6 @@ footer{
   .project_content{
     text-align: center;
   }
-
-
-
 
 
  #aPropos {
@@ -878,29 +925,29 @@ footer{
 		display: none;
       } */
 
-			.valeur_ajoute{
-				background-color: #81fa81;
+			/* .valeur_ajoute{
+				background-color: #ffdf5e;
 				border-radius: 20px;
 				box-shadow: 5px 3px 3px blue;
 				width: 90%;
 				margin: 40px auto 50px;
 				padding: 10px;
-			}
+			} */
 
 			.border_contact{
-			  background-color: #81fa81;
+			  background-color: #ffdf5e;
 			  border-radius: 20px;
 			  box-shadow: 5px 3px 3px blue;
 			  width: 90%;
 			  margin: 0 auto ;
-			  padding: 10px;
+			  padding: 20px;
 
 			}
 
 			#prix{
-				background-color: #81fa81;
+				background-color: #ffdf5e;
 				border-radius: 20px;
-				box-shadow: 5px 3px 3px blue;
+				/* box-shadow: 5px 3px 3px blue; */
 				width: 90%;
 				margin: 0 auto 50px;
 				padding: 10px;
@@ -934,11 +981,10 @@ footer{
 	}
 
 
-
+/* MEDIA MAX 420P ***********************/
  @media screen and (max-width:420px){
 
 /* navbar *****************/
-
 header{
 	margin-top: 10vh;
 }
@@ -985,9 +1031,12 @@ header{
       font-size: 30px;
     }
     h2.about, h2.text-center, h2.offreH, h2.competences{
-      font-size: 60px;
+      /* font-size: 60px; */
       padding-top: 40px;
     }
+		#ban1 h2{
+			width: auto;
+		}
 		.container.cont_nav{
 	    display: flex;
 	    justify-content:  center;;
