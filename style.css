@@ -41,11 +41,44 @@ a:active,a:focus{
 
 
 /* GENERAL */
+
+
 h2{
-  font-size: 70px;
-padding-top: 80px;
-padding-bottom: 50px;
-font-family: 'Kaushan Script';
+  font-size: 60px;
+  font-family: 'Kaushan Script';
+  text-transform: capitalize;
+  color: #0b5ed7;
+  margin: 5% auto;
+  text-shadow: 4px 3px 0px rgba(0,0,0,0.3);
+  
+}
+
+h3{
+	font-size: 30px;
+	padding: 10px;
+	margin: 7vh 0 2vh;
+	font-family: 'Kaushan Script';
+	background-color: blue;
+	color: whitesmoke;
+	width: fit-content;
+	border-radius: 0px 20px 20px 0;
+
+}
+
+h4{
+  font-size: 15px;
+	padding: 5px;
+	border: 1px;
+	border-radius: 10px;
+	border-bottom-width: thick;
+	font-family: sans-serif roboto;
+	margin: 0 auto 15px;
+	width: auto;
+
+}
+
+img{
+    width: -moz-available;
 }
 
 
@@ -69,6 +102,11 @@ header{
     margin: 0;
     color: #2f2d2d;
     line-height: 0.5;
+    margin-bottom: 40px;
+    flex-flow: row;
+    font-family: 'Kaushan Script';
+    line-height: inherit;
+  
 }
 
 h1{
@@ -126,14 +164,18 @@ h2.about{
   width: 100%;
 }
 
-/* ---------------------------Trois icones */
-#icones{
+/* --------------------------- garanties Trois icones */
+#garanties{
     padding-top: 75px;
     padding-bottom:75px;
     border-bottom: 1px dashed #2f2d2d;
+    border-top: 1px dashed #2f2d2d;
 }
+
 .icone_titre{
-  font-size: 40px;
+ font-size: 30px;
+  background-color: white;
+  color: black;
 }
 
 /*--------------------------- 1er banniere */
@@ -145,20 +187,23 @@ h2.about{
     background-attachment: fixed;
     background-repeat: no-repeat;
     text-align: center;
+    
+}
+
+img .galaxy{
+    width: auto;
+}
+
+.galaxy{
+    width: auto;
 }
 
 /*---------------------------- Galerie */
 #galerie{
-    padding-bottom:100px;
+    padding-bottom: 10%;
 
 }
 
-/* .h2Photos{
-    padding-top: 50px;
-    padding-bottom: 20px;
-    font-family: "Kaushan Script";
-    font-size: 70px;
-} */
 
 #galerie .container p{
     padding-bottom: 40px;
@@ -174,12 +219,61 @@ h2.titre_site{
    color: #22a7f0;
 }
 
-h2{
-  text-transform: capitalize;
-  color: #0b5ed7;
-  margin-top: 30px;
-  text-shadow: 4px 3px 0px rgba(0,0,0,0.3);
+
+
+/*   PRESTATIONS--------------------*/
+svg text{
+  text-anchor: middle;
+  dominant-baseline: middle;
 }
+
+.prestations{
+	padding-top: 0px !important;
+}
+
+ .btn-group{
+	margin-top: 10px;
+}
+
+.img_card{
+	object-fit: fill;
+	margin: 0 auto;
+	border: 1px;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.img_rx, .img_entreprise, .img_site, .img_marketing  {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.img_rx:hover, .img_entreprise:hover, .img_site:hover, .img_marketing:hover{
+    transform:scale(1.1);
+		z-index: 1000;
+		transition: 0.5s ease-in-out;
+}
+
+.card{
+	padding: 15px;
+	position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #0d6efd;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  color: whitesmoke;
+}
+
+.button_card:hover{
+	background-color: #0d6efd;;
+	color: white;
+}
+
+
 
 /*------------------------------- seconde banniere */
 
@@ -199,7 +293,7 @@ h2{
     font-weight: 400;
 }
 
-/*-------------------------------------- Cartes prix */
+/*----CARTES TARIFS *****************************/
 
 .offreH{
     font-size: 70px;
@@ -209,7 +303,13 @@ h2{
 }
 
 #cartes{
-    padding: 50px 0 100px 0;
+    padding: 50px 0 20px 0;
+		width: 95%;
+		margin: 0 auto;
+}
+
+.carte2{
+	width: inherit;
 }
 
 .threeCards{
@@ -218,10 +318,12 @@ h2{
     position: relative;
     transition: 0.2s ease-in;
     box-shadow: 0px 10px 30px #000;
+		background-color: white;
 }
 
 .threeCards:hover{
     transform:scale(1.1);
+		z-index: 1000;
 }
 
 .header{
@@ -231,13 +333,15 @@ h2{
     background: rgba(216, 216, 216, 0.5)
 }
 
-.header h3{
+.carte_prix{
     margin: 0;
     position: relative;
     top: 130px;
     text-align: center;
     font-family: 'Lato';
     font-size: 15px;
+    color: black;
+    background-color: #ebebeb;
 }
 
 h2.carte_prix{
@@ -245,6 +349,7 @@ top: 200px;
 /* margin-top: 200px; */
 padding-top: 10px;
 text-align: center;
+font-size=60px;
 }
 
 span#spanPrix{
@@ -252,8 +357,9 @@ span#spanPrix{
     height: 50px;
 }
 
-h2.promess{
+h2.promes{
     padding-top: 50px;
+		font-size=60px;
 }
 
 .type{
@@ -274,7 +380,7 @@ h2.promess{
     font-size: 30px;
     position: relative;
     /* top: 30px; */
-    padding-top: 10px
+    padding: 10px
 }
 
 .details{
@@ -295,7 +401,6 @@ h2.promess{
 #btn {
     background: #fff;
     height: 50px;
-
 }
 
 #btn a {
@@ -310,14 +415,13 @@ h2.promess{
     top: 10px;
     border-radius: 30px;
     border: 1px solid #22a7f0;
-    transition: all 0.2s ease-in;
+    transition: all 0.8s ease-in;
 }
 
 
 #btn a:hover{
     background: rgba(6,136,206,0.8);
     color: #fff;
-
 }
 
 /* bouton envoyer */
@@ -325,7 +429,7 @@ h2.promess{
 
 /* progress competences-------------------------- */
 
-#progress{
+  #progress{
     border-top: 1px dashed #000;
     /* border-bottom: 1px solid #000; */
     padding-top: 100px;
@@ -336,6 +440,7 @@ h2.competences{
   font-size: 40px;
   padding-top: 0;
 }
+---- */
 
 
 /* clients---------------------------- */
@@ -345,6 +450,12 @@ h2.competences{
     border-bottom: 1px solid #0000;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+/* FOOTER*/
+footer{
+  background-color: #0d6efd; 
+  color: white;
 }
 
 
@@ -443,6 +554,7 @@ h2.competences{
   .text-intro{
     padding-top: 10rem  ;
   }
+  
 }
 
 @media screen and (max-width: 600px){
@@ -461,6 +573,14 @@ h2.competences{
   h3.titre_site{
     padding-top: 20px;
   }
+  
+  #aPropos{
+    background-color: aliceblue;
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 20px;
+  }
+  }
 
 
   .projects_section{
@@ -475,8 +595,8 @@ h2.competences{
 		border-radius: 20px;
 		padding: 10px;
 		padding: 10px 70px ;
-		width: auto;
-		margin: 15px 12px;
+		width: 90%;
+		margin: 0 auto 15px;
 		position: absolute;
 }
 
@@ -488,8 +608,8 @@ h2.competences{
 		border-radius: 20px;
 		/* padding: 10px;*/
 		/* padding: 10px 70px ; */
-		 width: auto; 
-		margin: 0 12px;
+		 width: 90%; 
+		margin: 0 auto;
 		/* text-align: center;   */
  } 
 
@@ -519,12 +639,14 @@ h2.competences{
    
 
   footer{
-    background-color: whitesmoke ;
+    /* background-color: whitesmoke ;*/
+    background-color: #0d6efd; 
+    color: white;
     background-position: 10px;
     border-radius: 20px;
     padding: 10px 70px ;
-    width: auto;
-    margin: 15px 12px;
+    width: 90%;
+    margin: 15px auto;
     text-align: center;
   }
 
@@ -564,6 +686,19 @@ h2.competences{
 		display: none;
       } */
   }
+  
+  #garanties{
+      text-align: center;
+      border-radius: 20px;
+      background-color: aliceblue;
+      width: auto 10px;
+  }
+  
+  #contact {
+  border-radius: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
  
 
 
@@ -592,13 +727,16 @@ h2.competences{
         padding-top: 100px;
     }
 
-		.container.cont_nav{
-			display: flex;
-			justify-content: space-between;
-			flex-wrap: nowrap;
-			align-items: center;
-			/* width: 100%; */
-		}
+.container.cont_nav{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	align-items: center;
+	/* width: 100%; */
+	{
+display: contents;  
+	
+}
 
     h1{
       padding-top: 20px;
@@ -608,26 +746,26 @@ h2.competences{
       font-size: 50px;
       padding-top: 40px;
     }
-		.container.cont_nav{
-	    display: flex;
-	    justify-content: space-between;
-	    flex-wrap: nowrap;
-	    align-items: center;
-	    /* width: 100%; */
-	  }
+.container.cont_nav{
+display: flex;
+justify-content: space-between;
+flex-wrap: nowrap;
+align-items: center;
+/* width: 100%; */
+}
 
-		.sect_tit_txt{
-			margin: 35px 0;
-			height: auto;
-		}
+.sect_tit_txt{
+	margin: 35px 0;
+	height: auto;
+}
 
-		/* .preTxt{
-			font-size: 15px;
-		} */
-		/* .btn{
-			height: 80%;
-			width: 80%;
-		} */
+/* .preTxt{
+	font-size: 15px;
+} */
+/* .btn{
+	height: 80%;
+	width: 80%;
+} */
 
 
  }
